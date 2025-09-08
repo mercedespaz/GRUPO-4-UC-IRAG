@@ -1,4 +1,4 @@
-#Librerias a utilizar
+#Librerias a usar en el informe
 
 library(tidyverse)
 library(highcharter)
