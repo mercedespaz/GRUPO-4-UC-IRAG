@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div style="text-align: center; margin-bottom: 50px;">
+  <img src="Logo_Ministerio_Mendoza.png">
+  
+</body>
+</html>

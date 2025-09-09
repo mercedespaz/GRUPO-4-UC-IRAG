@@ -1,0 +1,197 @@
+---
+lang: es 
+title: 'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): HOSPITAL "DR. HUMBERTO J. NOTTI", MENDOZA'
+format:
+ html: 
+   embed-resources: true
+   author: 
+    - name: Celeste Guerrero (Mendoza)
+    - name: Lia Bosio (Mendoza)
+    - name: Gonzalo Crombas (Río Negro)
+    - name: Julia Lozano (Río Negro)
+    - name: Mara Russo (ANLIS Malbrán)
+    - name: María Elena Dattero (ANLIS Malbrán) 
+   toc: true
+   toc-title: "Indice"
+   toc-depth: 3
+   toc-location: left
+   theme: cerulean
+   include-before-body: "Logo_Ministerio_Mendoza.html" 
+editor: visual
+execute: 
+ warning: false
+ message: false
+smooth-scroll: true
+include-in-header:
+  text: |
+    <style>
+        body {
+        background-color: #fff;
+        font-family: Open sans, Arial, sans-serif;
+        color: #666;
+      }
+     h1 {
+        color: #0207a4;
+        text-align: center;
+        font-size: 1.7em;
+        border-bottom: 1px solid #808080;
+        padding-bottom: 15px;
+        margin-top: 30px !important;
+      }
+     h2 {
+        color: #0693e3;
+        text-align: left;
+        font-size: 1.4em;
+        border-bottom: 1px solid #808080;
+        padding-bottom: 15px;
+      }
+     h3 {
+        color: #00b5e8;
+        text-align: left;
+        font-size: 1.2em;
+        padding-bottom: 15px;
+      }
+     p {
+        color: #666666;
+        font-size: 1em;
+        line-height: 1.5;
+        text-align: justify;
+      }
+    </style>
+---
+
+## Introducción
+
+Las infecciones respiratorias agudas (IRA) representan una importante causa de morbimortalidad, especialmente en niñas y niños menores de cinco años, con mayor impacto en los menores de dos años, en adultos mayores y en personas con enfermedades preexistentes. La vigilancia integrada de virus respiratorios con potencial epidémico y pandémico, como SARS-CoV-2, Influenza, virus sincicial respiratorio (VSR) y otros, resulta esencial para caracterizar la situación epidemiológica, detectar eventos inusuales y aplicar oportunamente medidas de prevención y control. Cada año, estos virus circulan con distinta intensidad en las diferentes regiones del país, provocando cuadros de IRA de gravedad variable. La Organización Mundial de la Salud (OMS) recomienda la implementación de Sistemas de Vigilancia Centinela de hospitalizaciones por Infección Respiratoria Aguda Grave (IRAG), integrados con el componente de laboratorio, para la detección oportuna de virus respiratorios con potencial epidémico y pandémico. En este contexto, este análisis se plantea con el objetivo de describir la epidemiología de las IRAG en la población pediátrica consultante en el Hospital "Dr. Humberto J. Notti" de la provincia de Mendoza durante el período SE23 de 2024 a SE34 de 2025, aportando datos que contribuyan a producir información para la toma de decisiones basadas en evidencia. La vigilancia centinela de IRAG en Mendoza se desarrolla a través de una Unidad Centinela Provincial que cuenta con un componente pediátrico en el Hospital "Dr. Humberto J. Notti" y un componente adulto en el Hospital "Luis Lagomaggiore", que atiende pacientes adultos y mujeres embarazadas. El Hospital "Dr. Humberto J. Notti" es una institución pediátrica polivalente de alta complejidad, especializada en la atención de pacientes agudos y crónicos, y constituye el hospital de referencia de la Región de Cuyo. El mismo atiende a la patología proveniente del Gran Mendoza y a la patología pediátrica regional de otras provincias que conforman la región de Cuyo.
+
+```{r}
+#| echo: false
+#| warning: false
+
+source("librerias.R")
+source("importacion_base.R")
+source("Mapa/mapa_efectores.R")
+source("Graficos/casos_semanas_epidemiologicas.R")
+source("Graficos/grafico_evolucion_UTIP.R")
+source("Graficos/grafico_determinaciones_edad.R")
+source("Graficos/grafico_determinaciones_se.R")
+
+```
+
+```{r}
+#| echo: false
+
+
+mapa_efectores
+
+```
+
+## Objetivo general
+
+Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del Hospital "Dr. Humberto J. Notti" de la provincia de Mendoza, desde la Semana Epidemiológica (SE) 23 de 2024 a la SE34 de 2025.
+
+## Objetivos específicos
+
+-   Determinar la frecuencia y distribución temporal (por SE) de los casos de IRAG e IRAGe.
+
+-   Analizar la distribución por grupo etario de los casos totales de IRAG e IRAGe.
+
+-   Caracterizar la presencia de comorbilidades y la evolución de los casos de IRAG e IRAGe.
+
+-   Definir la frecuencia absoluta y relativa y la distribución temporal (por SE) de los agentes etiológicos priorizados (VSR, SARS CoV-2, Influenza).
+
+-   Analizar la cobertura y calidad del dato de vacunación (antigripal \< 2 años, vacuna materna contra VSR y antigripal materna), en casos de IRAG e IRAGe notificados en el SNVS 2.0.
+
+-   Caracterizar la demanda asistencial y el impacto en la ocupación de camas de internación general pediátrica y terapia intensiva pediátrica y/o neonatal.
+
+## Propósito
+
+El presente informe tiene como finalidad generar información epidemiológica y clínica sobre los casos de IRAG e IRAGe internados en el Hospital "Dr. Humberto J. Notti", con énfasis en la identificación de los virus respiratorios predominantes, la caracterización de la demanda asistencial y el impacto en la ocupación de camas de internación general pediátrica y terapia intensiva pediátrica y/o neonatal . Esta evidencia busca respaldar la toma de decisiones con respecto a la planificación y asignación de recursos hospitalarios, optimizando la respuesta frente a los períodos de mayor circulación viral.
+
+## Período de estudio
+
+El período considerado se estableció teniendo en cuenta que la SE inicial coincide con la primera semana de implementación de la estrategia UC-IRAG en el establecimiento H. Dr. Notti (SE 23/2024) y la SE final (SE 34/2025), es un punto de corte definido por convención, que incluye la última SE disponible en las bases de datos que serán sujetas a análisis al momento de la realización del presente informe. Este período temporal podrá modificarse y/o actualizarse en sucesivos informes, incorporando otras SE del año en curso o posteriores, acorde a la información disponible.
+
+La selección de este período permite:
+
+-   Incluir la totalidad de los casos registrados con definición de IRAG y/o IRAGe desde el inicio de la estrategia de vigilancia centinela en el hospital.
+
+-   Comparar la evolución de los principales virus respiratorios (VSR, Influenza, SARS-CoV-2) en el período temporal descrito (temporada invernal 2024 y 2025).
+
+-   Contar con información actualizada, representativa y completa que contribuya a la planificación de estrategias de prevención, atención y uso de recursos hospitalarios.
+
+## Unidad de análisis
+
+La unidad de análisis temporal (por SE) contempla el análisis de los datos de la notificación numérica (agrupada semanal) para la construcción del indicador correspondiente: reporte numérico por SE de casos internados totales en el establecimiento y proporción de casos internados por IRAG e IRAGe.\
+La población consiste en pacientes en edad pediátrica (menores de 15 años) internados en los Servicios de internación general y unidades críticas (UTIP y neonatología) del Hospital "Dr. Humberto J. Notti" de Mendoza. Dentro de esta población general, el análisis se centrará en los pacientes internados que cumplan con las definiciones de caso de IRAG e IRAGe (casos incluidos en la estrategia); todos los casos notificados por el establecimiento en el evento UC-IRAG durante el período considerado.
+
+## Criterios de inclusión y exclusión de la estrategia
+
+### Criterios de inclusión
+
+-   Pacientes de 0 a 15 años que cumplan con las definiciones de caso IRAG/IRAGe.
+
+-   Pacientes que cumplen con las definiciones de caso antedichas e inicio de los síntomas en la comunidad dentro de los 10 días previos a la internación.
+
+-   Estadía hospitalaria con internación mínima de 24 hs o que haya fallecido en menos de ese plazo.
+
+### Criterios exclusión
+
+-   Casos invalidados por epidemiología
+
+-   Casos de IRAG/ IRAGe sin muestra de laboratorio o con muestra procesada con pruebas no moleculares (genoma viral) al momento de contabilizar las determinaciones totales.
+
+-   Pacientes internados previamente en otra institución y posteriormente derivados al establecimiento que funciona como UC por la gravedad del caso.
+
+-   Infección respiratoria de posible origen nosocomial con fecha de inicio de síntomas 24 hs posterior al ingreso o antecedente de internación por cualquier causa dentro de los 14 días previos al nuevo ingreso por IRAG.
+
+-   Sintomatología que pueda explicarse por procesos no infecciosos (por ejemplo, insuficiencia cardiaca aguda, tromboembolismo pulmonar).
+
+### Definición de caso
+
+**Infección Respiratoria Aguda Grave (IRAG)**
+
+Paciente de cualquier edad con infección respiratoria aguda con:
+
+-   Fiebre referida o constatada \>= 38°C; y - Tos; y
+
+-   Inicio del cuadro en los 10 días precedentes; y
+
+-   Requerimiento de internación por criterio clínico.
+
+**Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años**
+
+Infección respiratoria: definida por tos o dificultad respiratoria; e
+
+-   Inicio del cuadro en los 10 días precedentes; y
+
+-   Requerimiento de internación por criterio clínico.
+
+En lactantes menores de 6 meses también considerar:
+
+-   Apnea (cese temporal de la respiración por cualquier causa), o
+
+-   Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
+
+## Situación epidemiológica
+
+El siguiente gráfico muestra los casos totales (IRAG e IRAGe) correspondientes a la Estrategia Centinela de Infecciones Respiratorias Agudas Graves del Hospital "Dr. Humberto J. Notti", durante las semanas epidemiológicas 23 del año 2024 a 34 del año 2025. En el mismo se puede observar que en ambos periodos (2024-2025) la mayor cantidad de casos se reportaron en la SE33, siendo el que presenta mayor cantidad de casos el del año en curso.
+
+```{r}
+#| echo: false
+
+
+
+casos_se
+
+```
+
+En lo que respecta a internaciones, tanto los casos de IRAG como IRAGe requirieron en su mayoría internación en la Unidad de Terapia Intensiva Pediátrica (UTIP) (90,2% y 83,9%, respectivamente), demostrando la gravedad de las patologías respiratorias que se están monitoreando desde este componente de vigilancia (UC-IRAG).
+
+```{r}
+#| echo: false
+
+
+grafico_UTIP_2
+
+```

@@ -48,13 +48,13 @@ grafico_interactivo_virus <- highchart()  %>%
                   pointPadding = 0.1,   
                   groupPadding = 0.05,  
                   borderWidth = 0))  %>% 
-  hc_add_series(name = "Influenza", data = data_virus$"casos_influenza", color = "red")  %>% 
-  hc_add_series(name = "VSR", data = data_virus$"casos_vsr", color = "darkgreen")  %>% 
-  hc_add_series(name = "Sars-Cov-2", data = data_virus$"casos_covid", color = "blue")  %>%
+  hc_add_series(name = "Influenza", data = data_virus$"casos_influenza", color = "#fdae6b")  %>% 
+  hc_add_series(name = "VSR", data = data_virus$"casos_vsr", color = "#3182bd")  %>% 
+  hc_add_series(name = "Sars-Cov-2", data = data_virus$"casos_covid", color = "#0207a4")  %>%
   hc_exporting(enabled = T) %>%
   hc_title(text = 
-             "Casos de virus respiratorios por semana epidemiológica.\n Desde SE23 2024-SE34 2025.\n 
-               Hospital Dr.H.Notti,Mendoza.")
+             "Casos confirmados de IRAG e IRAGe por resultado de laboratorio y semana epidemiológica.\n Desde SE23 2024-SE34 2025.\n Hospital Dr.Humberto J. Notti, Mendoza.")
+             
 
 #Visualizo grafico
 grafico_interactivo_virus

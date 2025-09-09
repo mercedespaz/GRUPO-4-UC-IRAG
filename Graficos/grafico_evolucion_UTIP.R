@@ -94,7 +94,7 @@ grafico_UTIP_2 <- highchart() %>%
   hc_tooltip(
     pointFormat = "{series.name}: <b>{point.y}</b> casos<br/>Proporción: <b>{point.percentage:.1f}%</b>"
   ) %>%
-  hc_title(text = "Requerimiento de UTIP en IRAG e IRAGE. Hospital Dr. Humberto J. Notti, Mendoza")
+  hc_title(text = "Requerimiento de UTIP en IRAG e IRAGe. Desde SE23 2024-SE34 2025.\n Hospital Dr.Humberto J. Notti, Mendoza.")
 
 
 grafico_UTIP_2
