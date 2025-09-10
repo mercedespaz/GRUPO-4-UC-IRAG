@@ -19,7 +19,7 @@ library(tidyr)
 
 #Descargo base desde el drive en formato csv. Incorporo a data de mi R.project
 
-data <- read_csv("data/UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
+data <- read_csv("UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
 
 #Identifico el nombre de las columanas para poder seleccionarlas
 
