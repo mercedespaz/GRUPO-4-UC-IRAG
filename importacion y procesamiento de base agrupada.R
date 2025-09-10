@@ -42,12 +42,6 @@ df_agrupada <- data %>% select(ANIO,SEMANA,NOMBREEVENTOAGRP,"0 a 2 m","3 a 5 m",
 
 spec(data)
 
-#Convertir columnas categóricas a numéricas
-#Sugiero aplicar la funcion as. mueric al data frame creado anteriormente (df_agrupado). Sería así:
-
-df_agrupada <- df_agrupada %>% mutate(across(c("0 a 2 m","3 a 5 m", "6 a 11 m","12 a 23 m",
-                                      "2 a 4 años","5 a 9 años","10 a 14 años"),as.numeric))
-
 
 #Usando esta opcion se genera un archivo más en el entorno de trabajo
 df_agrupada_numerica <- df_agrupada %>% 
@@ -81,50 +75,31 @@ internados_IRAG_por_SE <- df_agrupada_numerica %>%
   filter(NOMBREEVENTOAGRP == "Casos de IRAG entre los internados")
 
 
-#Consideraciones para el analisis
+#CONSIDERACIONES PARA EL ANALISIS
 
+#Seleccionar columnas de interes (ya lo hiciste)
 
-#Selecciono clasificaciones de interés para el cálculo de porcentaje de ocipación de camas
+#Filtrar clasificaciones de interés para el cálculo de porcentaje de ocupación de camas
+# "Casos de IRAG entre los internados" y"Pacientes internados por todas las causas"  
 
-#Paramatros temporales: excluir registros previos a la implementacion de la estrategia (SE 23-2024) 
-# y posteriores al punto de corte del análisis (SE 34-2025)
+#Paramatros temporales: filtrar registros previos a la implementacion de la estrategia (SE 23-2024) 
+# y posteriores al punto de corte del análisis que están realizando (SE 34-2025)
 
-df_agrupada<-df_agrupada %>% mutate (SEPI=paste0(ANIO,"-",SEMANA)) %>%
-  relocate(SEPI,.after = SEMANA)
+#Se puede crear una variable que concatene el año y SE y filtrar a partir de allí
 
-comienzo_estrategia <-"2024-23"
-corte_analisis <-"2025-34" 
+#Suma de internados por SE sugiero pivotear el dataframe hacia lo largo
+#pasando a filas los grupos de edad 0-2 meses a 14 años, definir el nombre de la nueva columna y el argumento values
+#Para poder sumarizar los internados, la columna values tiene que ser convertida a numeric.
 
-#Filtro segun criterios temporales
-df_agrupada<-df_agrupada %>% filter(SEPI >= comienzo_estrategia & SEPI <= corte_analisis)
+#Agrupar y sumarizar para obtener internados por SE y nombre del evento: internados por todas las causas
+#e internados por IRAG
 
-#La función unique me permite conocer los nombres de las categorías de la variable evento agrupado
-unique(data$NOMBREEVENTOAGRP)
-
-
-#Categorias de interés para la ocupación de camas por IRAG e IRAGe
-internados<- c("Pacientes internados por todas las causas","Casos de IRAG entre los internados","Casos de IRAG extendida entre los internados")
-
-df_agrupada<- df_agrupada %>% filter (NOMBREEVENTOAGRP %in% internados) %>%
-  pivot_longer(5:ncol(df_agrupada),names_to = "grupo_edad",values_to ="casos_internados")
+#Para poder tener un dataframe que en cada columna tenga los internados por IRAG e internados totales
+#podemos pivotear el dataframe creado anteriormente a formato wider donde los nombres de las
+#columnas sean el nombre del evento agrupado y los valores el conteo del dataframe anterior
 
 
 
-df_agrupada$casos_internados <- as.numeric(df_agrupada$casos_internados)
 
-df_agrupada<-df_agrupada %>% group_by(SEPI,NOMBREEVENTOAGRP) %>%
-  summarise(internados= sum(casos_internados),
-            .groups = "drop")
-
-#Calcular porcentaje de ocupacion por SE 
-ocupacion_internacion <- df_agrupada %>%
-  pivot_wider(
-    names_from = NOMBREEVENTOAGRP,
-    values_from = internados
-  ) %>%
-  mutate(
-    pct_irag = round(`Casos de IRAG entre los internados` / `Pacientes internados por todas las causas` * 100,1),
-    pct_irag_extendida =round(`Casos de IRAG extendida entre los internados` / `Pacientes internados por todas las causas` * 100,1)
-  )
 
 
