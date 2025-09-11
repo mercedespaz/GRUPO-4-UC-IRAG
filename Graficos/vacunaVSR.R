@@ -2,10 +2,17 @@
 library(highcharter)
 library(dplyr)
 
+#Crear variable GRUPOETARIO
+#La base original no tiene la categoria menor a 6 meses, construirla para luego poder filtrar
+#por ese criterio
+
 #armado de la base de datos
-data_vacuna<- notti%>% 
-  select(VAC_VSR,GRUPOETARIO) %>%
-  filter(GRUPOETARIO=="Menor a 6 Meses")
+data_vacuna<- data%>% 
+  select(VAC_VSR,EDAD_UC_IRAG) %>%
+  mutate(GRUPO_ETARIO= case_when(EDAD_UC_IRAG == "0 a 2 Meses" | EDAD_UC_IRAG == "3 a 5 Meses" ~ "Menor a 6 Meses",
+                                              EDAD_UC_IRAG == "6 a 11 Meses"| EDAD_UC_IRAG == "12 a 23 Meses" ~ "6 a 23 Meses ",
+                                              TRUE ~ EDAD_UC_IRAG ))%>%
+  filter(GRUPO_ETARIO=="Menor a 6 Meses")
 
 #crear variable para vacuna SI en caso que la haya recibido y NO en defecto
 data_vacuna <- data_vacuna %>%
@@ -32,7 +39,8 @@ data_vacuna_tabla <- data_vacuna %>%
     Frecuencia = n
   )
 
-data_vacuna_tabla
+#Comentar los prints para que no se renderizen en el quarto
+#data_vacuna_tabla
  
 # Calcular frecuencias
 totales <- sum(data_vacuna_tabla$Frecuencia)
@@ -52,8 +60,9 @@ valores <- data_vacuna_tabla %>%
 Grafico_vacuna <- highchart() %>%
   hc_chart(type = "bar") %>%
   hc_xAxis(
-    categories = c("Vacunación"), # una sola categoría
-    title = list(text = NULL)
+    categories = categorias, #c("Vacunación"), # una sola categoría
+    title = list(text = NULL),
+    labels = list(enabled = FALSE) #no muestra etiqueta en el eje x
   ) %>%
   hc_yAxis(
     title = list(text = "Cantidad de madres"),
@@ -91,4 +100,5 @@ Grafico_vacuna <- highchart() %>%
     text = "Vacunación materna VSR en grupo etario menor a 6 meses
     con IRAG e IRAGe - Hospital Dr. H. Notti"
   )
+
 Grafico_vacuna
