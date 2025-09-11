@@ -1,6 +1,6 @@
 ---
 lang: es 
-title: 'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): HOSPITAL "DR. HUMBERTO J. NOTTI", MENDOZA'
+title:  'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): HOSPITAL "DR. HUMBERTO J. NOTTI", MENDOZA'
 format:
  html: 
    embed-resources: true
@@ -16,48 +16,49 @@ format:
    toc-depth: 3
    toc-location: left
    theme: cerulean
-   include-before-body: "Logo_Ministerio_Mendoza.html" 
+   include-before-body: "Logo_Ministerio_Mendoza.html"
+   include-in-header:
+     text: |
+       <style>
+        body {
+           background-color: #f2eded;
+           font-family: Open sans, Arial, sans-serif;
+           color: #666;
+         }
+        h1 {
+           color: #0207a4;
+           text-align: center;
+           font-size: 1.7em;
+           border-bottom: 1px solid #808080;
+           padding-bottom: 15px;
+           margin-top: 30px !important;
+         }
+        h2 {
+           color: #0693e3;
+           text-align: left;
+           font-size: 1.4em;
+           border-bottom: 1px solid #808080;
+           padding-bottom: 15px;
+         }
+        h3 {
+           color: #00B5E8;
+           text-align: left;
+           font-size: 1.2em;
+           padding-bottom: 15px;
+         }
+        p {
+           color: #434343;
+           font-size: 1em;
+           line-height: 1.5;
+           text-align: justify;
+         }
+       </style>
 editor: visual
 execute: 
  warning: false
  message: false
 smooth-scroll: true
-include-in-header:
-  text: |
-    <style>
-        body {
-        background-color: #fff;
-        font-family: Open sans, Arial, sans-serif;
-        color: #666;
-      }
-     h1 {
-        color: #0207a4;
-        text-align: center;
-        font-size: 1.7em;
-        border-bottom: 1px solid #808080;
-        padding-bottom: 15px;
-        margin-top: 30px !important;
-      }
-     h2 {
-        color: #0693e3;
-        text-align: left;
-        font-size: 1.4em;
-        border-bottom: 1px solid #808080;
-        padding-bottom: 15px;
-      }
-     h3 {
-        color: #00b5e8;
-        text-align: left;
-        font-size: 1.2em;
-        padding-bottom: 15px;
-      }
-     p {
-        color: #666666;
-        font-size: 1em;
-        line-height: 1.5;
-        text-align: justify;
-      }
-    </style>
+code-copy: true
 ---
 
 ## Introducción
@@ -173,9 +174,14 @@ En lactantes menores de 6 meses también considerar:
 
 -   Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
+<div style="text-align: center;">
+  <img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+</div>
+
 ## Situación epidemiológica
 
-El siguiente gráfico muestra los casos totales (IRAG e IRAGe) correspondientes a la Estrategia Centinela de Infecciones Respiratorias Agudas Graves del Hospital "Dr. Humberto J. Notti", durante las semanas epidemiológicas 23 del año 2024 a 34 del año 2025. En el mismo se puede observar que en ambos periodos (2024-2025) la mayor cantidad de casos se reportaron en la SE33, siendo el que presenta mayor cantidad de casos el del año en curso.
+Desde que se inicio la Estrategia Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG) en el Hospital "Dr. Humberto J. Notti" en la SE 23 de 2024, se han notificado has un total de 1619 casos hasta la SE 34 del 2025.
+El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificó en la SE 33. Además, el año en curso presenta el mayor número de casos registrados en comparación con el mismo periodo del año anterior.
 
 ```{r}
 #| echo: false
@@ -186,7 +192,17 @@ casos_se
 
 ```
 
-En lo que respecta a internaciones, tanto los casos de IRAG como IRAGe requirieron en su mayoría internación en la Unidad de Terapia Intensiva Pediátrica (UTIP) (90,2% y 83,9%, respectivamente), demostrando la gravedad de las patologías respiratorias que se están monitoreando desde este componente de vigilancia (UC-IRAG).
+Del total de casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos.
+
+```{r}
+#| echo: false
+
+grafico_interactivo_virus
+
+```
+
+
+En lo que respecta a las internaciones, la mayoría de los casos de IRAG e IRAGe menores de 15 años requirieron ingreso a la Unidad de Terapia Intensiva Pediátrica (UTIP), con porcentajes del 90,2% y 83,9%, respectivamente. Estos datos demuestran la gravedad de las patologías respiratorias monitoreadas por la Estrategia Centinela (UC-IRAG), e indican que la mayoría de los pacientes hospitalizados en el establecimiento necesitan una atención más especializada.
 
 ```{r}
 #| echo: false
@@ -195,3 +211,4 @@ En lo que respecta a internaciones, tanto los casos de IRAG como IRAGe requirier
 grafico_UTIP_2
 
 ```
+
