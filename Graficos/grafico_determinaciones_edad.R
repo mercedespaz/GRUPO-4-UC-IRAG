@@ -8,9 +8,15 @@ source("importacion_base.R")
 data_virusedad <- data %>% select(EDAD_UC_IRAG,INFLUENZA_FINAL,VSR_FINAL,COVID_19_FINAL)
 
 #Reclasifico grupos de edad 
-data_virusedad <- data_virusedad %>% mutate(GRUPO_ETARIO= case_when(EDAD_UC_IRAG == "0 a 2 Meses" | EDAD_UC_IRAG == "3 a 5 Meses" ~ "Menor a 6 Meses",
-                                                EDAD_UC_IRAG == "6 a 11 Meses"| EDAD_UC_IRAG == "12 a 23 Meses" ~ "6 a 23 Meses ",
-                                                TRUE ~ EDAD_UC_IRAG ))  
+
+data_virusedad <- data_virusedad %>% mutate(
+  GRUPO_ETARIO = case_when(
+    EDAD_UC_IRAG %in% c("0 a 2 Meses", "3 a 5 Meses") ~ "Menor a 6 Meses",
+    EDAD_UC_IRAG %in% c("6 a 11 Meses", "12 a 23 Meses") ~ "6 a 23 Meses",
+    TRUE ~ EDAD_UC_IRAG
+  )
+)
+
 
 #Establezco niveles para los grupos de edad creados
 niveles_edades <- c("Menor a 6 Meses","6 a 23 Meses","02 a 04 Años", "05 a 09 Años","10 a 14 Años")
