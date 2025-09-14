@@ -46,13 +46,13 @@ data_vacuna_tabla <- data_vacuna %>%
 totales <- sum(data_vacuna_tabla$Frecuencia)
 
 # Categorías
-categorias <- c("SI VACUNA MATERNA", "NO VACUNA MATERNA")
+categorias <- c("CON VACUNA MATERNA", "SIN VACUNA MATERNA")
 
 # Datos con porcentaje
 valores <- data_vacuna_tabla %>%
   filter(Vacuna %in% c("1","0")) %>%
   mutate(
-    Grupo = ifelse(Vacuna == "1", "SI VACUNA MATERNA", "NO VACUNA MATERNA"),
+    Grupo = ifelse(Vacuna == "1", "CON VACUNA MATERNA", "SIN VACUNA MATERNA"),
     Porcentaje = round(Frecuencia / totales * 100, 1)
   )
 
