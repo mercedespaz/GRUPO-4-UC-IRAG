@@ -99,12 +99,12 @@ Gráficoagrupado <- highchart() %>%
   hc_add_series(name = "% IRAG e IRAGe",
                 type = "line",
                 data = round(dataagrupado$pct_IRAG, 1),
-                color = "red",
+                color = "#ff8000",
                 yAxis = 1,
                 tooltip = list(valueSuffix = "%"),
                 dataLabels = list(enabled = TRUE, format = "{y}%")) %>%
-  hc_title(text = "Porcentaje de IRAG sobre el total de internaciones
-           \nSE23 2024 - SE34 2025\nHospital Dr.H.Notti, Mendoza")
+  hc_title(text = "Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. 
+  Desde SE23 2024-SE34 2025.\n Hospital Dr. Humberto J. Notti, Mendoza.")
 
 Gráficoagrupado
 

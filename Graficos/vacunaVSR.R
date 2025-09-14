@@ -86,19 +86,19 @@ Grafico_vacuna <- highchart() %>%
   ) %>%
   # Serie 1: SI vacunación materna
   hc_add_series(
-    name = "SI VACUNA MATERNA",
-    data = list(valores$Frecuencia[valores$Grupo == "SI VACUNA MATERNA"]),
+    name = "CON VACUNA MATERNA",
+    data = list(valores$Frecuencia[valores$Grupo == "CON VACUNA MATERNA"]),
     color = "#feb24c"
   ) %>%
   # Serie 2: NO vacunación materna
   hc_add_series(
-    name = "NO VACUNA MATERNA",
-    data = list(valores$Frecuencia[valores$Grupo == "NO VACUNA MATERNA"]),
+    name = "SIN VACUNA MATERNA",
+    data = list(valores$Frecuencia[valores$Grupo == "SIN VACUNA MATERNA"]),
     color = "#3182bd"
   ) %>%
   hc_title(
-    text = "Vacunación materna VSR en grupo etario menor a 6 meses
-    con IRAG e IRAGe - Hospital Dr. H. Notti"
+    text = "Vacunación materna VSR en menores de 6 meses notificados en la UC-IRAG
+    (IRAG e IRAGe). Desde SE23 2024-SE34 2025. Hospital Dr. Humberto J. Notti, Mendoza."
   )
 
 Grafico_vacuna
