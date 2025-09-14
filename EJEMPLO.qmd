@@ -76,6 +76,9 @@ source("Graficos/casos_semanas_epidemiologicas.R")
 source("Graficos/grafico_evolucion_UTIP.R")
 source("Graficos/grafico_determinaciones_edad.R")
 source("Graficos/grafico_determinaciones_se.R")
+source("Graficos/comorbilidades.R")
+source("Graficos/vacunaVSR.R")
+source("Graficos/agrupado.R")
 
 ```
 
@@ -192,13 +195,41 @@ casos_se
 
 ```
 
-Del total de casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos.
+Las internaciones relacionadas con la Estrategia Centinela representan [PONER PORCENTAJE] del total de internaciones realizadas en el Hospital. Este dato demuestra la relevancia de la estrategia en dicho establecimiento.
+
+```{r}
+#| echo: false
+
+
+Gráficoagrupado
+```
+
+De esos casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos.
 
 ```{r}
 #| echo: false
 
 grafico_interactivo_virus
 
+```
+
+En cuanto a los grupos etarios, la mayor cantidad de casos positivos se concentró en los menores de 6 meses, quienes además presentaron el mayor número de casos de VSR y SARS-CoV-2. En cambio, los casos de Influenza fueron más frecuentes en el grupo de 2 a 4 años.
+
+
+```{r}
+#| echo: false
+
+
+
+grafico_interactivo_virusedad
+```
+
+
+
+```{r}
+#| echo: false
+
+graficocomorbilidad
 ```
 
 
@@ -211,4 +242,15 @@ En lo que respecta a las internaciones, la mayoría de los casos de IRAG e IRAGe
 grafico_UTIP_2
 
 ```
+
+```{r}
+#| echo: false
+
+
+Grafico_vacuna
+```
+
+
+
+
 
