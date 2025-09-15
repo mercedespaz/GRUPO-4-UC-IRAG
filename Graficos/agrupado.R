@@ -26,8 +26,8 @@ dataagrupado <- UC_IRAG_Carga_Agrupada %>%
        (ANIO == 2025 & SEMANA <= 34))) %>%
   # Crear etiqueta de semana y año
   mutate(
-    sepi_label = paste(ANIO, "-", SEMANA),
-    sepi_label = factor(sepi_label, levels = unique(paste(ANIO, "-", SEMANA))))
+    sepi_label = paste(ANIO, "- SE", SEMANA),
+    sepi_label = factor(sepi_label, levels = unique(paste(ANIO, "- SE", SEMANA))))
 
 # Se estructura a formato largo: pasar columnas de edad a una variable "grupo_etario"
 # y guardar los valores en "casos_totales"
