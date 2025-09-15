@@ -177,14 +177,13 @@ En lactantes menores de 6 meses también considerar:
 
 -   Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
-<div style="text-align: center;">
-  <img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-</div>
+::: {style="text-align: center;"}
+<img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
+:::
 
 ## Situación epidemiológica
 
-Desde que se inicio la Estrategia Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG) en el Hospital "Dr. Humberto J. Notti" en la SE 23 de 2024, se han notificado has un total de 1619 casos hasta la SE 34 del 2025.
-El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificó en la SE 33. Además, el año en curso presenta el mayor número de casos registrados en comparación con el mismo periodo del año anterior.
+Desde que se inicio la Estrategia Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG) en el Hospital "Dr. Humberto J. Notti" en la SE 23 de 2024, se han notificado has un total de 1619 casos hasta la SE 34 del 2025. El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificó en la SE 33. Además, el año en curso presenta el mayor número de casos registrados en comparación con el mismo periodo del año anterior.
 
 ```{r}
 #| echo: false
@@ -195,7 +194,7 @@ casos_se
 
 ```
 
-Las internaciones relacionadas con la Estrategia Centinela representan [PONER PORCENTAJE] del total de internaciones realizadas en el Hospital. Este dato demuestra la relevancia de la estrategia en dicho establecimiento.
+Las internaciones relacionadas con la Estrategia Centinela representan \[PONER PORCENTAJE\] del total de internaciones realizadas en el Hospital. Este dato demuestra la relevancia de la estrategia en dicho establecimiento.
 
 ```{r}
 #| echo: false
@@ -204,9 +203,7 @@ Las internaciones relacionadas con la Estrategia Centinela representan [PONER PO
 Gráficoagrupado
 ```
 
-Del total de casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos.
-Entre la SE 23 y 41 del 2024, se observa que la circulación predominante corresponde al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar y con menor magnitud. Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2.
-Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
+Del total de casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos. Entre la SE 23 y 41 del 2024, se observa que la circulación predominante corresponde al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar y con menor magnitud. Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2. Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
 
 ```{r}
 #| echo: false
@@ -215,8 +212,7 @@ grafico_interactivo_virus
 
 ```
 
-La mayor concentración de casos positivos por grupo etario se observó en el grupo de 6 a 23 meses, seguido por los menores de 6 meses.
-El VSR predomina de manera significativa entre los casos positivos de menores de 4 años. Por otro lado, en los grupos de 5 a 14 años, hay un mayor predominio de Influenza. En todos los grupos etarios, la incidencia de SARS-CoV-2 es insignificante en comparación con los otros virus respiratorios analizados dentro de la Estrategia.
+La mayor concentración de casos positivos por grupo etario se observó en el grupo de 6 a 23 meses, seguido por los menores de 6 meses. El VSR predomina de manera significativa entre los casos positivos de menores de 4 años. Por otro lado, en los grupos de 5 a 14 años, hay un mayor predominio de Influenza. En todos los grupos etarios, la incidencia de SARS-CoV-2 es insignificante en comparación con los otros virus respiratorios analizados dentro de la Estrategia.
 
 ```{r}
 #| echo: false
@@ -225,8 +221,6 @@ El VSR predomina de manera significativa entre los casos positivos de menores de
 
 grafico_interactivo_virusedad
 ```
-
-
 
 ```{r}
 #| echo: false
@@ -252,8 +246,3 @@ En el período de estudio, los casos notificados en menores de 6 meses mostraron
 
 Grafico_vacuna
 ```
-
-
-
-
-
