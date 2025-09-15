@@ -9,11 +9,17 @@ UC_IRAG_Carga_Agrupada <- read_csv("UC IRAG - Carga Agrupada-Mendoza-Notti - HOS
 #Elimino primeraa fila que no contiene datos
 UC_IRAG_Carga_Agrupada <-UC_IRAG_Carga_Agrupada[-1,]
 
+ 
 #unique(UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_$NOMBREEVENTOAGRP)
 
 #Crear el data frame de datos agrupados segun nuestras variables de interés
 
 evento<-c("Pacientes internados por todas las causas", "Casos de IRAG entre los internados","Casos de IRAG extendida entre los internados")
+
+UC_IRAG_Carga_Agrupada$ANIO<-as.numeric (UC_IRAG_Carga_Agrupada$ANIO)
+
+UC_IRAG_Carga_Agrupada$SEMANA<-as.numeric (UC_IRAG_Carga_Agrupada$SEMANA)
+
 
 dataagrupado <- UC_IRAG_Carga_Agrupada %>%
   # Filtrar columnas de interés
@@ -23,11 +29,12 @@ dataagrupado <- UC_IRAG_Carga_Agrupada %>%
   filter(
     NOMBREEVENTOAGRP %in% evento &
       ((ANIO == 2024 & SEMANA >= 23) |
-       (ANIO == 2025 & SEMANA <= 34))) %>%
+         (ANIO == 2025 & SEMANA <= 34))) %>%
   # Crear etiqueta de semana y año
   mutate(
     sepi_label = paste(ANIO, "- SE", SEMANA),
     sepi_label = factor(sepi_label, levels = unique(paste(ANIO, "- SE", SEMANA))))
+
 
 # Se estructura a formato largo: pasar columnas de edad a una variable "grupo_etario"
 # y guardar los valores en "casos_totales"
@@ -76,7 +83,10 @@ Gráficoagrupado <- highchart() %>%
   ) %>%
   hc_plotOptions(
     column = list(
-      stacking = "normal",             # <-- barras apiladas
+      stacking = "normal",
+      pointPadding = 0.1,   
+      groupPadding = 0.05,  
+      borderWidth = 0,
       dataLabels = list(enabled = FALSE)
     ),
     line = list(
