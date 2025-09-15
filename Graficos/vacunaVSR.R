@@ -46,13 +46,13 @@ data_vacuna_tabla <- data_vacuna %>%
 totales <- sum(data_vacuna_tabla$Frecuencia)
 
 # Categorías
-categorias <- c("CON VACUNA MATERNA", "SIN VACUNA MATERNA")
+categorias <- c("Con antecedentes de vacuna materna", "Sin antecedentes de vacuna materna")
 
 # Datos con porcentaje
 valores <- data_vacuna_tabla %>%
   filter(Vacuna %in% c("1","0")) %>%
   mutate(
-    Grupo = ifelse(Vacuna == "1", "CON VACUNA MATERNA", "SIN VACUNA MATERNA"),
+    Grupo = ifelse(Vacuna == "1", "Con antecedentes de vacuna materna", "Sin antecedentes de vacuna materna"),
     Porcentaje = round(Frecuencia / totales * 100, 1)
   )
 
@@ -65,36 +65,26 @@ Grafico_vacuna <- highchart() %>%
     labels = list(enabled = FALSE) #no muestra etiqueta en el eje x
   ) %>%
   hc_yAxis(
-    title = list(text = "Cantidad de madres"),
+    title = list(text = "Número de casos"),
     max = max(valores$Frecuencia) * 1.2
-  ) %>%
-  hc_plotOptions(
-    bar = list(
-      dataLabels = list(
-        enabled = TRUE,
-        formatter = JS(
-          paste0(
-            "function() {",
-            "  var total = ", totales, ";",
-            "  var pct = (this.y / total * 100).toFixed(1);",
-            "  return this.y + ' casos - ' + pct + '%';",
-            "}"
-          )
-        )
-      )
-    )
-  ) %>%
+  )  %>%
   # Serie 1: SI vacunación materna
   hc_add_series(
-    name = "CON VACUNA MATERNA",
-    data = list(valores$Frecuencia[valores$Grupo == "CON VACUNA MATERNA"]),
+    name = "Con antecedentes de vacunación materna",
+    data = list(valores$Frecuencia[valores$Grupo == "Con antecedentes de vacuna materna"]),
     color = "#feb24c"
   ) %>%
   # Serie 2: NO vacunación materna
   hc_add_series(
-    name = "SIN VACUNA MATERNA",
-    data = list(valores$Frecuencia[valores$Grupo == "SIN VACUNA MATERNA"]),
+    name = "Sin antecedentes de vacunación materna",
+    data = list(valores$Frecuencia[valores$Grupo == "Sin antecedentes de vacuna materna"]),
     color = "#3182bd"
+  ) %>%
+  hc_exporting(enabled = TRUE) %>%
+  hc_tooltip(
+    useHTML = TRUE,
+    headerFormat = '',
+    pointFormat = '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b>'
   ) %>%
   hc_title(
     text = "Vacunación materna VSR en menores de 6 meses notificados en la UC-IRAG
