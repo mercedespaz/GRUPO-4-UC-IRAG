@@ -1,6 +1,6 @@
 ---
 lang: es 
-title: 'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): HOSPITAL "DR. HUMBERTO J. NOTTI", MENDOZA'
+title:  'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): HOSPITAL "DR. HUMBERTO J. NOTTI", MENDOZA'
 format:
  html: 
    embed-resources: true
@@ -16,48 +16,49 @@ format:
    toc-depth: 3
    toc-location: left
    theme: cerulean
-   include-before-body: "Logo_Ministerio_Mendoza.html" 
+   include-before-body: "Logo_Ministerio_Mendoza.html"
+   include-in-header:
+     text: |
+       <style>
+        body {
+           background-color: #f2eded;
+           font-family: Open sans, Arial, sans-serif;
+           color: #666;
+         }
+        h1 {
+           color: #0207a4;
+           text-align: center;
+           font-size: 1.7em;
+           border-bottom: 1px solid #808080;
+           padding-bottom: 15px;
+           margin-top: 30px !important;
+         }
+        h2 {
+           color: #0693e3;
+           text-align: left;
+           font-size: 1.4em;
+           border-bottom: 1px solid #808080;
+           padding-bottom: 15px;
+         }
+        h3 {
+           color: #00B5E8;
+           text-align: left;
+           font-size: 1.2em;
+           padding-bottom: 15px;
+         }
+        p {
+           color: #434343;
+           font-size: 1em;
+           line-height: 1.5;
+           text-align: justify;
+         }
+       </style>
 editor: visual
 execute: 
  warning: false
  message: false
 smooth-scroll: true
-include-in-header:
-  text: |
-    <style>
-        body {
-        background-color: #fff;
-        font-family: Open sans, Arial, sans-serif;
-        color: #666;
-      }
-     h1 {
-        color: #0207a4;
-        text-align: center;
-        font-size: 1.7em;
-        border-bottom: 1px solid #808080;
-        padding-bottom: 15px;
-        margin-top: 30px !important;
-      }
-     h2 {
-        color: #0693e3;
-        text-align: left;
-        font-size: 1.4em;
-        border-bottom: 1px solid #808080;
-        padding-bottom: 15px;
-      }
-     h3 {
-        color: #00b5e8;
-        text-align: left;
-        font-size: 1.2em;
-        padding-bottom: 15px;
-      }
-     p {
-        color: #666666;
-        font-size: 1em;
-        line-height: 1.5;
-        text-align: justify;
-      }
-    </style>
+code-copy: true
 ---
 
 ## Introducción
@@ -75,6 +76,9 @@ source("Graficos/casos_semanas_epidemiologicas.R")
 source("Graficos/grafico_evolucion_UTIP.R")
 source("Graficos/grafico_determinaciones_edad.R")
 source("Graficos/grafico_determinaciones_se.R")
+source("Graficos/comorbilidades.R")
+source("Graficos/vacunaVSR.R")
+source("Graficos/agrupado.R")
 
 ```
 
@@ -173,9 +177,13 @@ En lactantes menores de 6 meses también considerar:
 
 -   Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
+::: {style="text-align: center;"}
+<img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
+:::
+
 ## Situación epidemiológica
 
-El siguiente gráfico muestra los casos totales (IRAG e IRAGe) correspondientes a la Estrategia Centinela de Infecciones Respiratorias Agudas Graves del Hospital "Dr. Humberto J. Notti", durante las semanas epidemiológicas 23 del año 2024 a 34 del año 2025. En el mismo se puede observar que en ambos periodos (2024-2025) la mayor cantidad de casos se reportaron en la SE33, siendo el que presenta mayor cantidad de casos el del año en curso.
+Desde que se inicio la Estrategia Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG) en el Hospital "Dr. Humberto J. Notti" en la SE 23 de 2024, se han notificado has un total de 1619 casos hasta la SE 34 del 2025. El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificó en la SE 33. Además, el año en curso presenta el mayor número de casos registrados en comparación con el mismo periodo del año anterior.
 
 ```{r}
 #| echo: false
@@ -186,7 +194,41 @@ casos_se
 
 ```
 
-En lo que respecta a internaciones, tanto los casos de IRAG como IRAGe requirieron en su mayoría internación en la Unidad de Terapia Intensiva Pediátrica (UTIP) (90,2% y 83,9%, respectivamente), demostrando la gravedad de las patologías respiratorias que se están monitoreando desde este componente de vigilancia (UC-IRAG).
+Las internaciones relacionadas con la Estrategia Centinela representan \[PONER PORCENTAJE\] del total de internaciones realizadas en el Hospital. Este dato demuestra la relevancia de la estrategia en dicho establecimiento.
+
+```{r}
+#| echo: false
+
+
+Gráficoagrupado
+```
+
+Del total de casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos. Entre la SE 23 y 41 del 2024, se observa que la circulación predominante corresponde al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar y con menor magnitud. Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2. Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
+
+```{r}
+#| echo: false
+
+grafico_interactivo_virus
+
+```
+
+La mayor concentración de casos positivos por grupo etario se observó en el grupo de 6 a 23 meses, seguido por los menores de 6 meses. El VSR predomina de manera significativa entre los casos positivos de menores de 4 años. Por otro lado, en los grupos de 5 a 14 años, hay un mayor predominio de Influenza. En todos los grupos etarios, la incidencia de SARS-CoV-2 es insignificante en comparación con los otros virus respiratorios analizados dentro de la Estrategia.
+
+```{r}
+#| echo: false
+
+
+
+grafico_interactivo_virusedad
+```
+
+```{r}
+#| echo: false
+
+graficocomorbilidad
+```
+
+En lo que respecta a las internaciones, la mayoría de los casos de IRAG e IRAGe menores de 15 años no requirieron ingreso a la Unidad de Terapia Intensiva Pediátrica (UTIP), con porcentajes del 90,2% y 83,9%, respectivamente. Sin embargo, en la IRAGe, la proporción de casos que requieron UTIP fue mayor en comparación a los de IRAG (16,1% vs. 9.8%).
 
 ```{r}
 #| echo: false
@@ -194,4 +236,13 @@ En lo que respecta a internaciones, tanto los casos de IRAG como IRAGe requirier
 
 grafico_UTIP_2
 
+```
+
+En el período de estudio, los casos notificados en menores de 6 meses mostraron que 248 madres (69,1%) no habían recibido la vacuna contra el Virus Sincicial Respiratorio (VSR), mientras que 111 madres (30,9%) sí contaban con la vacunación.
+
+```{r}
+#| echo: false
+
+
+Grafico_vacuna
 ```

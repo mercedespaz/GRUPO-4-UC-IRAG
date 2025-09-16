@@ -2,6 +2,10 @@
 #library(dplyr)
 #library(stringr)
 
+#Agregar como seleccionaron esas variables
+# Las variables incluidas se definieron previamente mediante un análisis en R con la función table(),
+# seleccionando aquellas 10 que presentaron las frecuencias más altas.
+
 # Variables originales en la base
 vars <- c("BAJO_PESO_NACIMIENTO","ASMA","CARDIOPATIA_CONGENITA",
           "DESNUTRICION","BRONQUIOLITIS_PREVIA","ENF_NEUROLOGICA_CRONICA",
@@ -9,12 +13,20 @@ vars <- c("BAJO_PESO_NACIMIENTO","ASMA","CARDIOPATIA_CONGENITA",
 
 #  nombres más legibles
 vars_title <- vars %>% 
-  str_to_lower() %>%              # paso a minúscula
+  #str_to_lower() %>%              # paso a minúscula
   str_replace_all("_", " ") %>%   # guión bajo → espacio
-  str_to_title()                  # primera letra en mayúscula
+  #str_to_title()                  # primera letra en mayúscula
+  str_to_sentence() #deja en mayúcula sólo la primera letra de la primera palabra
+
+#Codigo para corregir escritura 
+vars_title<-vars_title %>%
+  str_replace_all("Cardiopatia congenita","Cardiopatía congénita") %>%
+  str_replace_all("Enf neurologica cronica","Enfermedad neurológica crónica") %>%
+  str_replace_all("Desnutricion", "Desnutrición") %>%
+  str_replace_all("S down","Síndrome de Down")
 
 # Selección, recodificación y renombrado
-data_co <- notti %>% 
+data_co <- data %>% 
   select(all_of(vars)) %>% 
   mutate(across(everything(), ~ ifelse(. == 9, 0, .))) %>% 
   setNames(vars_title)
@@ -36,8 +48,8 @@ totales_comorbilidad_df <- data.frame(
 graficocomorbilidad <- totales_comorbilidad_df %>% 
   gt() %>%
   tab_header(
-    title = "Comorbilidades notificadas en IRAG e IRAGe 
-    \n -Hospital Dr.H.Notti",
+    title = "Comorbilidades notificadas totales en IRAG e IRAGe. Desde SE23 2024-SE34 2025. 
+    \n Hospital Dr. Humberto J. Notti, Mendoza.",
     ) %>%
   fmt_number(columns = "Porcentaje", decimals = 1) %>%
   cols_label(
@@ -45,9 +57,11 @@ graficocomorbilidad <- totales_comorbilidad_df %>%
     Total = "Frecuencia",
     Porcentaje = "%"
   ) %>%
+  cols_align(align="center",
+             columns= c(Total,Porcentaje)) %>%
   # Nota al pie de la tabla
   tab_source_note(
-    source_note = md("Fuente de datos: Sistema Nacional de Vigilancia de la Salud")
+    source_note = md("Fuente de datos: Sistema Nacional de Vigilancia de la Salud SNVS2.0")
   ) %>%
   # Nota al pie en cabecera
   tab_footnote(
@@ -70,8 +84,13 @@ graficocomorbilidad <- totales_comorbilidad_df %>%
   # Alinear cabeceras de columnas 1 y 2 a la izquierda
   tab_style(
     style = cell_text(align = "left"), 
-    locations = cells_column_labels(columns = c(Comorbilidad, Total))
-  )
+    locations = cells_column_labels(columns = Comorbilidad)
+  ) %>%
+  tab_style(
+    style = cell_text(align = "center"), 
+    locations = cells_column_labels(columns =c(Total,Porcentaje))
+  ) 
+  
 
 graficocomorbilidad
 

@@ -7,3 +7,6 @@ library(geoAr)
 library(ggplot2)
 library(dplyr)
 library(readr)
+library(gt)
+
+
