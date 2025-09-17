@@ -56,9 +56,9 @@ grafico_interactivo_virusedad <- highchart()  %>%
                   groupPadding = 0.05,  
                   borderWidth = 0))  %>% 
   hc_exporting(enabled = T) %>%
-  hc_add_series(name = "Influenza", data = data_virusedad$"casos_influenza", color = "#fec44f")  %>% 
-  hc_add_series(name = "VSR", data = data_virusedad$"casos_vsr", color = "#3182bd")  %>% 
-  hc_add_series(name = "SARS CoV-2", data = data_virusedad$"casos_covid", color = "#0207a4")  %>% 
+  hc_add_series(name = "Influenza", data = data_virusedad$"casos_influenza", color = "#fc4e2a")  %>% 
+  hc_add_series(name = "VSR", data = data_virusedad$"casos_vsr", color = "#8c6bb1")  %>% 
+  hc_add_series(name = "SARS CoV-2", data = data_virusedad$"casos_covid", color = "#41ab5d")  %>% 
   hc_title(text = "Determinaciones positivas de virus respiratorios por grupo etario en IRAG e IRAGe.\n Desde SE23 2024-SE34 2025.\n Hospital Dr. Humberto J. Notti, Mendoza.")            
 
 grafico_interactivo_virusedad
