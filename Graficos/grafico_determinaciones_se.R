@@ -32,8 +32,8 @@ data_virus <- data_virus%>%
 
 #Creo sepi_label para usar en el grafico
 data_virus <-data_virus %>% mutate(
-  sepi_label = paste(ANIO_MIN_INTERNACION, "-", SEPI_MIN_INTERNACION),
-  sepi_label = factor(sepi_label, levels = unique(paste(ANIO_MIN_INTERNACION, "-", SEPI_MIN_INTERNACION))))
+  sepi_label = paste(ANIO_MIN_INTERNACION, "- SE", SEPI_MIN_INTERNACION),
+  sepi_label = factor(sepi_label, levels = unique(paste(ANIO_MIN_INTERNACION, "- SE", SEPI_MIN_INTERNACION))))
 
 
 #Codigo gráfico interactivo
