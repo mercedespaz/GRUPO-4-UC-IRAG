@@ -88,13 +88,13 @@ Grafico_vacuna <- highchart() %>%
   hc_add_series(
     name = "SI VACUNA MATERNA",
     data = list(valores$Frecuencia[valores$Grupo == "SI VACUNA MATERNA"]),
-    color = "#feb24c"
+    color = "#cc4c02"
   ) %>%
   # Serie 2: NO vacunación materna
   hc_add_series(
     name = "NO VACUNA MATERNA",
     data = list(valores$Frecuencia[valores$Grupo == "NO VACUNA MATERNA"]),
-    color = "#3182bd"
+    color = "#fee391"
   ) %>%
   hc_title(
     text = "Vacunación materna VSR en grupo etario menor a 6 meses

@@ -5,7 +5,8 @@ library(tidyverse)
 library(highcharter)
 
 #carga de la base de datos agrupados
-UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_ <- read_csv("scripts/UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
+UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_ <- read_csv("UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
+#View(UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_)
 
 #unique(UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_$NOMBREEVENTOAGRP)
 
@@ -64,7 +65,7 @@ dataagrupado<- dataagrupado %>%
 
 
 #realizar grafico en highcharter: % IRAGtotal /internaciones totales por SE
-Gráficoagrupado <- highchart() %>%
+Graficoagrupado <- highchart() %>%
   hc_xAxis(categories = dataagrupado$sepi_label,
            title = list(text = "Semana Epidemiológica")) %>%
   hc_yAxis_multiples(
@@ -85,27 +86,27 @@ Gráficoagrupado <- highchart() %>%
   hc_add_series(name = "Casos de IRAG e IRAGe",
                 type = "column",
                 data = dataagrupado$`IRAG_totales`,
-                color = "#a6bddb",
+                color = "#fee391",
                 yAxis = 0,
                 stack = "internados") %>%
   # Serie otros internados (se calcula automáticamente = total - IRAG)
   hc_add_series(name = "Internaciones totales",
                 type = "column",
                 data = dataagrupado$`Pacientes internados por todas las causas` - dataagrupado$`IRAG_totales`,
-                color = "#1f77b4",
+                color = "#cc4c02",
                 yAxis = 0,
                 stack = "internados") %>%
   # Línea de porcentaje
   hc_add_series(name = "% IRAG e IRAGe",
                 type = "line",
                 data = round(dataagrupado$pct_IRAG, 1),
-                color = "red",
+                color = "#525252",
                 yAxis = 1,
                 tooltip = list(valueSuffix = "%"),
                 dataLabels = list(enabled = TRUE, format = "{y}%")) %>%
   hc_title(text = "Porcentaje de IRAG sobre el total de internaciones
            \nSE23 2024 - SE34 2025\nHospital Dr.H.Notti, Mendoza")
 
-Gráficoagrupado
+Graficoagrupado
 
 

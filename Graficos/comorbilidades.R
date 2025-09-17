@@ -1,6 +1,6 @@
-#library(gt)
-#library(dplyr)
-#library(stringr)
+library(gt)
+library(dplyr)
+library(stringr)
 
 #Agregar como seleccionaron esas variables
 # Las variables incluidas se definieron previamente mediante un análisis en R con la función table(),
@@ -72,7 +72,7 @@ graficocomorbilidad <- totales_comorbilidad_df %>%
   data_color(
     columns = Total,
     colors = scales::col_numeric(
-      palette = c("#deebf7", "#3182bd"),   # de verde muy claro a rojo oscuro
+      palette = c("#deebf7", "#1f77b4"),   # de verde muy claro a rojo oscuro
       domain = range(totales_comorbilidad_df$Total)
     )
   ) %>%
