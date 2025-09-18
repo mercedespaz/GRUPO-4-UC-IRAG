@@ -80,7 +80,7 @@ Grafico_vacuna <- highchart() %>%
   hc_add_series(
     name = "Sin antecedentes de vacuna materna",
     data = list(valores$Frecuencia[valores$Grupo == "Sin antecedentes de vacuna materna"]),
-    color = "#cc4c02"
+    color = "#DEB887"
   ) %>%
   hc_exporting(enabled = TRUE) %>%
   hc_tooltip(

@@ -109,7 +109,7 @@ Graficoagrupado <- highchart() %>%
   hc_add_series(name = "Internaciones por otras causas",
                 type = "column",
                 data = dataagrupado$Otras_internaciones,
-                color = "#cc4c02",
+                color = "#DEB887",
                 yAxis = 0,
                 stack = "internados") %>%
   # Línea de porcentaje
