@@ -64,7 +64,7 @@ Grafico_vacuna <- highchart() %>%
   hc_xAxis(
     categories = categorias, 
     title = list(text = NULL),
-    labels = list(enabled = TRUE) # mostrar etiquetas en eje x
+    labels = list(enabled = FALSE) # mostrar etiquetas en eje x
   ) %>%
   hc_yAxis(
     title = list(text = "Número de casos"),
