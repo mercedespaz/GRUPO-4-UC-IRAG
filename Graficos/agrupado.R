@@ -4,10 +4,6 @@ library(tidyverse)
 library(highcharter)
 
 
-#carga de la base de datos agrupados
-UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_ <- read_csv("UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
-#View(UC_IRAG_Carga_Agrupada_Mendoza_Notti_HOSPITAL_HUMBERTO_J_NOTTI_)
-
 #Carga de la base de datos agrupados
 UC_IRAG_Carga_Agrupada <- read_csv("UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
 
@@ -115,11 +111,11 @@ Graficoagrupado <- highchart() %>%
   # Línea de porcentaje
   hc_add_series(name = "% Internaciones por IRAG e IRAGe",
                 type = "line",
-                data = round(dataagrupado$pct_irag, 1),
+                data =dataagrupado$pct_irag,
                 color = "#525252",
                 yAxis = 1,
                 tooltip = list(valueSuffix = "%"),
-                dataLabels = list(enabled = TRUE, format = "{y}%")) %>%
+                dataLabels = list(enabled = FALSE)) %>%
   hc_exporting(enabled= TRUE) %>%
   hc_title(text = "Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. 
   Desde SE23 2024 - SE34 2025.\nHospital Dr. Humberto J. Notti, Mendoza.")
