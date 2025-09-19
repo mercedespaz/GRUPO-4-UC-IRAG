@@ -76,9 +76,7 @@ Caracterizar a través de variables epidemiológicas, clínicas y del diagnósti
 
 -   Caracterizar la demanda asistencial y el impacto en la ocupación de camas de internación general pediátrica y terapia intensiva pediátrica y/o neonatal.
 
-
 ## DEFINICIONES DE CASO
-
 
 ### Infección Respiratoria Aguda Grave (IRAG)
 
@@ -89,7 +87,6 @@ Paciente de cualquier edad con infección respiratoria aguda con:
 -   Inicio del cuadro en los 10 días precedentes; y
 
 -   Requerimiento de internación por criterio clínico.
-
 
 ### Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años
 
@@ -116,7 +113,6 @@ En lactantes menores de 6 meses también considerar:
 -   Pacientes que cumplen con las definiciones de caso antedichas e inicio de los síntomas en la comunidad dentro de los 10 días previos a la internación.
 
 -   Estadía hospitalaria con internación mínima de 24 hs o que haya fallecido en menos de ese plazo.
-
 
 ### Criterios exclusión
 
