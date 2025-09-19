@@ -20,6 +20,22 @@ data_virus<- data_virus %>% mutate (detectable_influenza = if_else(INFLUENZA_FIN
                                     detectable_VSR = if_else (VSR_FINAL %in% resultado_detectable_VSR,1,0),
                                     detectable_covid = if_else(COVID_19_FINAL == resultado_detectable_covid,1,0))
 
+casos_influenza <- sum(data_virus$detectable_influenza, na.rm = TRUE)
+casos_VSR       <- sum(data_virus$detectable_VSR, na.rm = TRUE)
+casos_covid     <- sum(data_virus$detectable_covid, na.rm = TRUE)
+
+total_detectables <- casos_influenza + casos_VSR + casos_covid
+
+#Porcentajes
+
+porc_influenza <- round((casos_influenza / total_detectables) * 100, 1)
+porc_VSR       <- round((casos_VSR / total_detectables) * 100, 1)
+porc_covid     <- round((casos_covid / total_detectables) * 100, 1)
+
+
+total_data <- nrow(data)
+
+porc_detectables     <- round((total_detectables / total_data) * 100, 1)
 
 #Agrupo por año y semana y sumo la cantidad de determianciones segun tipo de virus
 data_virus <- data_virus%>%
@@ -34,6 +50,7 @@ data_virus <- data_virus%>%
 data_virus <-data_virus %>% mutate(
   sepi_label = paste(ANIO_MIN_INTERNACION, "- SE", SEPI_MIN_INTERNACION),
   sepi_label = factor(sepi_label, levels = unique(paste(ANIO_MIN_INTERNACION, "- SE", SEPI_MIN_INTERNACION))))
+
 
 
 #Codigo gráfico interactivo
