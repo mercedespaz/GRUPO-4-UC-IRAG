@@ -20,6 +20,10 @@ casos_IRAGe <- sum(data_filtrada$`IRAG extendida`, na.rm = TRUE)
 casos_IRAG <- sum(data_filtrada$`Infección respiratoria aguda grave (IRAG)`, na.rm = TRUE)
 casos_totales <- sum(casos_IRAG + casos_IRAGe)
 
+porc_IRAG <- round((casos_IRAG / casos_totales) * 100, 1)
+porc_IRAGe <- round((casos_IRAGe / casos_totales) * 100, 1)
+
+
 #GRAFICO INTERACTIVO POR SE POR IRAG E IRAGE
 casos_se <- highchart()  %>% 
   hc_chart(type = "column")  %>% 
