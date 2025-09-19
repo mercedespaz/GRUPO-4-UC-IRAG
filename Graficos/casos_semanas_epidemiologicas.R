@@ -16,6 +16,9 @@ data_filtrada <- data_filtrada %>% arrange(ANIO_MIN_INTERNACION,SEPI_MIN_INTERNA
                                    mutate(sepi_label = paste0(ANIO_MIN_INTERNACION, " - SE ", SEPI_MIN_INTERNACION),
                                           sepi_label = factor(sepi_label, levels = unique(paste(ANIO_MIN_INTERNACION, "- SE", SEPI_MIN_INTERNACION))))
 
+casos_IRAGe <- sum(data_filtrada$`IRAG extendida`, na.rm = TRUE)
+casos_IRAG <- sum(data_filtrada$`Infección respiratoria aguda grave (IRAG)`, na.rm = TRUE)
+casos_totales <- sum(casos_IRAG + casos_IRAGe)
 
 #GRAFICO INTERACTIVO POR SE POR IRAG E IRAGE
 casos_se <- highchart()  %>% 
