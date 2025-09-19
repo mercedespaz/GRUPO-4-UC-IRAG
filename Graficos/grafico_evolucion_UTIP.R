@@ -88,7 +88,7 @@ grafico_UTIP_2 <- highchart() %>%
              CLASIFICACION_MANUAL %in% categorias) %>% 
       arrange(match(CLASIFICACION_MANUAL, categorias)) %>% 
       pull(casos),
-    color = "#3182bd"
+    color = "#1f77b4"
   ) %>%
   hc_exporting(enabled = TRUE) %>%
   hc_tooltip(

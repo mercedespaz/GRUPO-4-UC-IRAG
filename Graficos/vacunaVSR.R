@@ -46,13 +46,15 @@ data_vacuna_tabla <- data_vacuna %>%
 totales <- sum(data_vacuna_tabla$Frecuencia)
 
 # Categorías
+# Categorías
 categorias <- c("Con antecedentes de vacuna materna", "Sin antecedentes de vacuna materna")
 
 # Datos con porcentaje
 valores <- data_vacuna_tabla %>%
-  filter(Vacuna %in% c("1","0")) %>%
+  filter(Vacuna %in% c("1", "0")) %>%
   mutate(
-    Grupo = ifelse(Vacuna == "1", "Con antecedentes de vacuna materna", "Sin antecedentes de vacuna materna"),
+    Grupo = ifelse(Vacuna == "1", "Con antecedentes de vacuna materna", 
+                   "Sin antecedentes de vacuna materna"),
     Porcentaje = round(Frecuencia / totales * 100, 1)
   )
 
@@ -60,25 +62,25 @@ valores <- data_vacuna_tabla %>%
 Grafico_vacuna <- highchart() %>%
   hc_chart(type = "bar") %>%
   hc_xAxis(
-    categories = categorias, #c("Vacunación"), # una sola categoría
+    categories = categorias, 
     title = list(text = NULL),
-    labels = list(enabled = FALSE) #no muestra etiqueta en el eje x
+    labels = list(enabled = FALSE) # mostrar etiquetas en eje x
   ) %>%
   hc_yAxis(
     title = list(text = "Número de casos"),
     max = max(valores$Frecuencia) * 1.2
-  )  %>%
-  # Serie 1: SI vacunación materna
-  hc_add_series(
-    name = "Con antecedentes de vacunación materna",
-    data = list(valores$Frecuencia[valores$Grupo == "Con antecedentes de vacuna materna"]),
-    color = "#feb24c"
   ) %>%
-  # Serie 2: NO vacunación materna
+  # Serie: vacunación materna
   hc_add_series(
-    name = "Sin antecedentes de vacunación materna",
+    name = "Con antecedentes de vacuna materna",
+    data = list(valores$Frecuencia[valores$Grupo == "Con antecedentes de vacuna materna"]),
+    color = "#fee391"
+  ) %>%
+  # Serie: sin vacunación materna
+  hc_add_series(
+    name = "Sin antecedentes de vacuna materna",
     data = list(valores$Frecuencia[valores$Grupo == "Sin antecedentes de vacuna materna"]),
-    color = "#3182bd"
+    color = "#DEB887"
   ) %>%
   hc_exporting(enabled = TRUE) %>%
   hc_tooltip(
@@ -88,7 +90,8 @@ Grafico_vacuna <- highchart() %>%
   ) %>%
   hc_title(
     text = "Vacunación materna VSR en menores de 6 meses notificados en la UC-IRAG
-    (IRAG e IRAGe). Desde SE23 2024-SE34 2025. Hospital Dr. Humberto J. Notti, Mendoza."
+    (IRAG e IRAGe). Desde SE23 2024-SE34 2025.\nHospital Dr. Humberto J. Notti, Mendoza."
   )
 
 Grafico_vacuna
+
