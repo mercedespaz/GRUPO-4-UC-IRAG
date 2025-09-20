@@ -13,7 +13,7 @@ format:
      - name: Mara Russo 
      - name: María Elena Dattero
    toc: true
-   toc-title: "Indice"
+   toc-title: "ÍNDICE"
    toc-depth: 3
    toc-location: left
    css: estilo.css
@@ -114,7 +114,7 @@ En lactantes menores de 6 meses también considerar:
 
 ### Criterios exclusión
 
--   Casos invalidados por epidemiología (se excluyen a los fines del análisis)
+-   Casos invalidados por epidemiología (se excluyen a los fines del análisis).
 
 -   Casos de IRAG/ IRAGe sin muestra de laboratorio o con muestra procesada con pruebas no moleculares al momento de contabilizar las determinaciones totales (se excluyen a los fines del análisis).
 
@@ -122,7 +122,7 @@ En lactantes menores de 6 meses también considerar:
 
 -   Infección respiratoria de posible origen nosocomial con fecha de inicio de síntomas 24 hs posterior al ingreso o antecedente de internación por cualquier causa dentro de los 14 días previos al nuevo ingreso por IRAG.
 
--   Sintomatología que pueda explicarse por procesos no infecciosos (por ejemplo, insuficiencia cardiaca aguda, tromboembolismo pulmonar).
+-   Sintomatología que pueda explicarse por procesos no infecciosos (por ejemplo, insuficiencia cardíaca aguda, tromboembolismo pulmonar).
 
 ## SITUACIÓN EPIDEMIOLÓGICA
 
@@ -170,12 +170,11 @@ El 32,8% de las comorbilidades notificadas en la estrategia correspondieron a br
 graficocomorbilidad
 ```
 
-### Requerimiento de terapia intensiva 
-
+### Requerimiento de terapia intensiva
 
 ### Cobertura de vacunación materna contra VSR en menores de 6 meses
 
-En el período de estudio, del total de casos de IRAG e IRAGe notificados en menores de 6 meses (359 casos), el 69,1 % de las madres no reportaban antecedentes de vacunación contra el Virus Sincicial Respiratorio- VSR (235 madres no vacunadas y 13 sin el dato registrado), mientras que el 30,9 % (111 madres) sí contaban con la vacunación. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VRS en este grupo etario.
+En el período de estudio, del total de casos de IRAG e IRAGe notificados en menores de 6 meses (359 casos), el 69,1 % de las madres no reportaban antecedentes de vacunación contra el Virus Sincicial Respiratorio- VSR (235 madres no vacunadas y 13 sin el dato registrado), mientras que el 30,9 % (111 madres) sí contaban con la vacunación. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VSR en este grupo etario.
 
 ```{r}
 #| echo: false
@@ -188,6 +187,12 @@ Grafico_vacuna
 
 Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el \[PONER PORCENTAJE\] del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que aporta una aproximación objetiva acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
 
-```{r} #| echo: false   Graficoagrupado}
+```{r}
+#| echo: false
+
+Graficoagrupado
+
 ```
+
+
 
