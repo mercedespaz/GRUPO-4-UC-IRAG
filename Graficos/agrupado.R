@@ -117,8 +117,7 @@ Graficoagrupado <- highchart() %>%
                 tooltip = list(valueSuffix = "%"),
                 dataLabels = list(enabled = FALSE)) %>%
   hc_exporting(enabled= TRUE) %>%
-  hc_title(text = "Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. 
-  Desde SE23 2024 - SE34 2025.\nHospital Dr. Humberto J. Notti, Mendoza.")
+  hc_title(text = "")
 
 
 Graficoagrupado
