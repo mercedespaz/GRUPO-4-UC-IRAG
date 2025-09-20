@@ -31,7 +31,7 @@ code-copy: true
 
 ## INTRODUCCIÓN
 
-Las infecciones respiratorias agudas (IRA) representan una importante causa de morbimortalidad, especialmente en niñas y niños menores de cinco años, con mayor impacto en los menores de dos años, en adultos mayores y en personas con enfermedades preexistentes. La vigilancia integrada de virus respiratorios con potencial epidémico y pandémico, como SARS-CoV-2, Influenza, virus sincicial respiratorio (VSR) y otros, resulta esencial para caracterizar la situación epidemiológica, detectar eventos inusuales y aplicar oportunamente medidas de prevención y control. Este análisis se plantea con el objetivo de describir la epidemiología de las IRAG en la población pediátrica consultante en el Hospital "Dr. Humberto J. Notti" de la provincia de Mendoza durante el período semana epidemiológica (SE) 23 de 2024 a SE34 de 2025, aportando datos que contribuyan a producir información para la toma de decisiones basadas en evidencia. Dicho establecimiento, es una institución pediátrica polivalente de alta complejidad, especializada en la atención de pacientes agudos y crónicos, y constituye el hospital de referencia de la Región de Cuyo. El mismo atiende a la patología proveniente del Gran Mendoza y a la patología pediátrica regional de otras provincias que conforman la región de Cuyo.
+Las infecciones respiratorias agudas (IRA) representan una importante causa de morbimortalidad, especialmente en niñas y niños menores de cinco años, con mayor impacto en los menores de dos años, en adultos mayores y en personas con enfermedades preexistentes. La vigilancia integrada de virus respiratorios con potencial epidémico y pandémico, como SARS-CoV-2, Influenza, virus sincicial respiratorio (VSR) y otros, resulta esencial para caracterizar la situación epidemiológica, detectar eventos inusuales y aplicar oportunamente medidas de prevención y control. Este análisis se plantea con el objetivo de describir la epidemiología de las Infecciones Respiratorias Agudas Graves (IRAG) en la población pediátrica consultante en el Hospital "Dr. Humberto J. Notti" de la provincia de Mendoza durante el período semana epidemiológica (SE) 23 de 2024 a SE34 de 2025, aportando datos que contribuyan a producir información para la toma de decisiones basadas en evidencia. Dicho establecimiento, es una institución pediátrica polivalente de alta complejidad, especializada en la atención de pacientes agudos y crónicos, y constituye el hospital de referencia de la Región de Cuyo. El mismo atiende a la patología proveniente del Gran Mendoza y a la patología pediátrica regional de otras provincias que conforman la región de Cuyo.
 
 ```{r}
 #| echo: false
@@ -60,19 +60,17 @@ mapa_efectores
 
 ## OBJETIVO GENERAL
 
-Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del Hospital "Dr. Humberto J. Notti" de la provincia de Mendoza, desde la Semana Epidemiológica (SE) 23 de 2024 a la SE34 de 2025.
+Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del Hospital "Dr. Humberto J. Notti" de la provincia de Mendoza, desde la SE 23 de 2024 a la SE34 de 2025.
 
 ## OBJETIVOS ESPECÍFICOS
 
 -   Determinar la frecuencia y distribución temporal (por SE) de los casos de IRAG e IRAGe.
 
--   Analizar la distribución por grupo etario de los casos totales de IRAG e IRAGe.
+-   Definir la frecuencia y la distribución temporal (por SE) y por grupo etario de los agentes etiológicos priorizados (VSR, SARS CoV-2, Influenza).
 
--   Caracterizar la presencia de comorbilidades y la evolución de los casos de IRAG e IRAGe.
+-   Caracterizar la presencia de comorbilidades y la evolución en cuanto al requerimiento de terapia intensiva de los casos de IRAG e IRAGe.
 
--   Definir la frecuencia absoluta y relativa y la distribución temporal (por SE) de los agentes etiológicos priorizados (VSR, SARS CoV-2, Influenza).
-
--   Analizar la cobertura y calidad del dato de vacunación (antigripal \< 2 años, vacuna materna contra VSR y antigripal materna), en casos de IRAG e IRAGe notificados en el SNVS 2.0.
+-   Analizar la cobertura y calidad del dato de vacunación (vacuna materna contra VSR), en casos de IRAG e IRAGe notificados en el SNVS 2.0.
 
 -   Caracterizar la demanda asistencial y el impacto en la ocupación de camas de internación general pediátrica y terapia intensiva pediátrica y/o neonatal.
 
@@ -82,7 +80,7 @@ Caracterizar a través de variables epidemiológicas, clínicas y del diagnósti
 
 Paciente de cualquier edad con infección respiratoria aguda con:
 
--   Fiebre referida o constatada \>= 38°C; y - Tos; y
+-   Fiebre referida o constatada \>= 38°C; y Tos; y
 
 -   Inicio del cuadro en los 10 días precedentes; y
 
@@ -116,9 +114,9 @@ En lactantes menores de 6 meses también considerar:
 
 ### Criterios exclusión
 
--   Casos invalidados por epidemiología
+-   Casos invalidados por epidemiología (se excluyen a los fines del análisis)
 
--   Casos de IRAG/ IRAGe sin muestra de laboratorio o con muestra procesada con pruebas no moleculares (genoma viral) al momento de contabilizar las determinaciones totales.
+-   Casos de IRAG/ IRAGe sin muestra de laboratorio o con muestra procesada con pruebas no moleculares al momento de contabilizar las determinaciones totales (se excluyen a los fines del análisis).
 
 -   Pacientes internados previamente en otra institución y posteriormente derivados al establecimiento que funciona como UC por la gravedad del caso.
 
@@ -128,7 +126,9 @@ En lactantes menores de 6 meses también considerar:
 
 ## SITUACIÓN EPIDEMIOLÓGICA
 
-Desde que se inicio la Estrategia Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG) en el Hospital "Dr. Humberto J. Notti" en la SE 23 de 2024, se han notificado has un total de 1619 casos hasta la SE 34 del 2025. El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificó en la SE 33. Además, el año en curso presenta el mayor número de casos registrados en comparación con el mismo periodo del año anterior.
+### Curva epidémica: casos de IRAG e IRAGe por SE
+
+Desde que se inicio la Estrategia de Unidades Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG), en el Hospital "Dr. Humberto J. Notti" en la SE 23 de 2024 hasta la SE 34 de 2025, se han notificado un total de 1619 casos. El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificaron en la SE 33 (mes de agosto). Además, el año en curso presenta un menor número de casos registrados en comparación con el mismo periodo del año anterior.
 
 ```{r}
 #| echo: false
@@ -137,16 +137,9 @@ casos_se
 
 ```
 
-Las internaciones relacionadas con la Estrategia Centinela representan \[PONER PORCENTAJE\] del total de internaciones realizadas en el Hospital. Este dato demuestra la relevancia de la estrategia en dicho establecimiento.
+### Determinaciones virales positivas: virus respiratorios priorizados (Inlfuenza, SARS CoV-2 y VSR)
 
-```{r}
-#| echo: false
-
-
-Graficoagrupado
-```
-
-Del total de casos notificados, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 casos. Entre la SE 23 y 41 del 2024, se observa que la circulación predominante corresponde al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar y con menor magnitud. Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2. Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
+Del total de casos notificados en la estrategia, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 determinaciones positivas entre los casos de IRAG e IRAGe. Entre la SE 23 y 41 del 2024, se observa que la circulación predominante correspondió al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar y con menor magnitud. Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2. Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
 
 ```{r}
 #| echo: false
@@ -155,7 +148,9 @@ grafico_interactivo_virus
 
 ```
 
-La mayor concentración de casos positivos por grupo etario se observó en el grupo de 6 a 23 meses, seguido por los menores de 6 meses. El VSR predomina de manera significativa entre los casos positivos de menores de 4 años. Por otro lado, en los grupos de 5 a 14 años, hay un mayor predominio de Influenza. En todos los grupos etarios, la incidencia de SARS-CoV-2 es insignificante en comparación con los otros virus respiratorios analizados dentro de la Estrategia.
+### Distribución por edad de los virus respiratorios priorizados
+
+La mayor concentración de casos positivos por grupo etario se observó en el grupo de 6 a 23 meses, seguido por los menores de 6 meses. El VSR predomina de manera significativa entre los casos positivos de menores de 4 años. Por otro lado, en los grupos de 5 a 14 años, hay un mayor predominio de Influenza. En todos los grupos etarios, la incidencia de SARS-CoV-2 es significativamente menor, en comparación con los otros virus respiratorios analizados dentro de la estrategia.
 
 ```{r}
 #| echo: false
@@ -165,7 +160,9 @@ La mayor concentración de casos positivos por grupo etario se observó en el gr
 grafico_interactivo_virusedad
 ```
 
-El 32,8% de las comorbilidades notificadas en la estrategia correspondieron a bronquiolitis previa y el 12,8% a prematuros. Estos datos están en línea con la alta cantidad de casos positivos de VSR notificados y respaldan la evidencia de una predisposición de estos pacientes a desarrollar dicha patología.
+### Comorbilidades más frecuentes reportadas entre los casos de IRAG e IRAGe pediátricos
+
+El 32,8% de las comorbilidades notificadas en la estrategia correspondieron a bronquiolitis previa y el 12,8% a prematuros. El predominio en el reporte de estas comorbilidades podría corresponderse con la mayor cantidad de determinaciones positivas para VSR identificadas, respaldando la evidencia de una predisposición de estos pacientes a desarrollar dicha patología.
 
 ```{r}
 #| echo: false
@@ -173,7 +170,12 @@ El 32,8% de las comorbilidades notificadas en la estrategia correspondieron a br
 graficocomorbilidad
 ```
 
-En el período de estudio, los casos notificados en menores de 6 meses mostraron que 248 madres (69,1%) no habían recibido la vacuna contra el Virus Sincicial Respiratorio (VSR), mientras que 111 madres (30,9%) sí contaban con la vacunación. Estos hallazgos están en línea con la evidencia de que las comorbilidades previas (como la prematuridad y la bronquiolitis) aumentan el riesgo de una forma grave de la enfermedad.
+### Requerimiento de terapia intensiva 
+
+
+### Cobertura de vacunación materna contra VSR en menores de 6 meses
+
+En el período de estudio, del total de casos de IRAG e IRAGe notificados en menores de 6 meses (359 casos), el 69,1 % de las madres no reportaban antecedentes de vacunación contra el Virus Sincicial Respiratorio- VSR (235 madres no vacunadas y 13 sin el dato registrado), mientras que el 30,9 % (111 madres) sí contaban con la vacunación. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VRS en este grupo etario.
 
 ```{r}
 #| echo: false
@@ -181,3 +183,11 @@ En el período de estudio, los casos notificados en menores de 6 meses mostraron
 
 Grafico_vacuna
 ```
+
+### Impacto en la ocupación de camas de internación pediátrica
+
+Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el \[PONER PORCENTAJE\] del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que aporta una aproximación objetiva acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
+
+```{r} #| echo: false   Graficoagrupado}
+```
+
