@@ -24,7 +24,7 @@ casos_influenza <- sum(data_virus$detectable_influenza, na.rm = TRUE)
 casos_VSR       <- sum(data_virus$detectable_VSR, na.rm = TRUE)
 casos_covid     <- sum(data_virus$detectable_covid, na.rm = TRUE)
 
-total_detectables <- casos_influenza + casos_VSR + casos_covid
+total_detectables <- sum(casos_influenza + casos_VSR + casos_covid)
 
 #Porcentajes
 
@@ -35,7 +35,7 @@ porc_covid     <- round((casos_covid / total_detectables) * 100, 1)
 
 total_data <- nrow(data)
 
-porc_detectables     <- round((total_detectables / total_data) * 100, 1)
+porc_detectables <- round((total_detectables / total_data) * 100, 1)
 
 #Agrupo por año y semana y sumo la cantidad de determianciones segun tipo de virus
 data_virus <- data_virus%>%
