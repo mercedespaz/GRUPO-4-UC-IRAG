@@ -1,6 +1,6 @@
 #DATOS DE IRAG E IRAGE POR SEMANA EPIDEMIOLOGICA
 
-source("importacion_base.R")
+source("importacion_base_nominal.R")
 
 #CASOS DE IRAG E IRAGE POR SE
 
@@ -37,8 +37,7 @@ casos_se <- highchart()  %>%
   hc_exporting(enabled = T) %>%
   hc_add_series(name = "IRAG extendida", data = data_filtrada$"IRAG extendida", color = "#feb24c")  %>% 
   hc_add_series(name = "Infección respiratoria aguda grave (IRAG)", data = data_filtrada$"Infección respiratoria aguda grave (IRAG)", color = "#1f77b4") %>% 
-  hc_title(text = "Casos de IRAG e IRAGe por Semana Epidemiológica.\n Desde SE23 2024-SE34 2025.\n Hospital Dr. Humberto J. Notti, Mendoza.")
-
+  hc_title(text = "")
 
 casos_se
 

@@ -48,8 +48,7 @@ totales_comorbilidad_df <- data.frame(
 graficocomorbilidad <- totales_comorbilidad_df %>% 
   gt() %>%
   tab_header(
-    title = "Comorbilidades notificadas totales en IRAG e IRAGe. Desde SE23 2024-SE34 2025. 
-    \n Hospital Dr. Humberto J. Notti, Mendoza.",
+    title = "",
     ) %>%
   fmt_number(columns = "Porcentaje", decimals = 1) %>%
   cols_label(
@@ -61,7 +60,7 @@ graficocomorbilidad <- totales_comorbilidad_df %>%
              columns= c(Total,Porcentaje)) %>%
   # Nota al pie de la tabla
   tab_source_note(
-    source_note = md("Fuente de datos: Sistema Nacional de Vigilancia de la Salud SNVS2.0")
+    source_note = md("")
   ) %>%
   # Nota al pie en cabecera
   tab_footnote(

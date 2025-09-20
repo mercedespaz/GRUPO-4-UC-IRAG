@@ -1,6 +1,6 @@
 #Grafico requerimiento de internacion IRAG e IRAGE
 
-source("importacion_base.R")
+source("importacion_base_nominal.R")
 
 #Categorias de las variables de interés
 #Clasificación manual: IRAG, IRAG extendida, Caso invalidado por epidemiologia
@@ -94,7 +94,8 @@ grafico_UTIP_2 <- highchart() %>%
   hc_tooltip(
     pointFormat = "{series.name}: <b>{point.y}</b> casos<br/>Proporción: <b>{point.percentage:.1f}%</b>"
   ) %>%
-  hc_title(text = "Requerimiento de UTIP en IRAG e IRAGe. Desde SE23 2024-SE34 2025.\n Hospital Dr. Humberto J. Notti, Mendoza.")
+  hc_title(text = "")
 
 
 grafico_UTIP_2
+

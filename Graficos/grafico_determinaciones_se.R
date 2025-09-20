@@ -1,7 +1,7 @@
 #GRAFICO DETERMINACIONES POSITIVAS POR SEMANA EPIDEMIOLOGICA
 
 #Importo base
-source("importacion_base.R")
+source("importacion_base_nominal.R")
 
 #Selecciono columnas de interes para el analisis
 data_virus <- data %>% select(SEPI_MIN_INTERNACION,ANIO_MIN_INTERNACION, INFLUENZA_FINAL,VSR_FINAL,COVID_19_FINAL)
@@ -70,7 +70,7 @@ grafico_interactivo_virus <- highchart()  %>%
   hc_add_series(name = "Sars-Cov-2", data = data_virus$"casos_covid", color = "#41ab5d")  %>%
   hc_exporting(enabled = T) %>%
   hc_title(text = 
-             "Determinaciones virales positivas por semana epidemiológica, entre los casos de IRAG e IRAGe.\n Desde SE23 2024-SE34 2025.\n Hospital Dr.Humberto J. Notti, Mendoza.")
+             "")
              
 
 #Visualizo grafico

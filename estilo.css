@@ -1,6 +1,6 @@
 
 body {
-  background-color: #f2eded;
+  background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
   color: #666;
 }
@@ -102,4 +102,8 @@ button:hover, .btn:hover {
 
 .quarto-title-authors {
   order: 1;
+}
+
+.criterios-pequenos {
+  font-size: 0.75em; /* 80% del tamaño normal */
 }

@@ -1,7 +1,7 @@
 #GRAFICO DE RESCATE VIRAL POR GRUPO ETARIO
 
 #Importo base
-source("importacion_base.R")
+source("importacion_base_nominal.R")
                                                                                                   
 #Selecciono variables de interes para el analisis
 
@@ -59,7 +59,7 @@ grafico_interactivo_virusedad <- highchart()  %>%
   hc_add_series(name = "Influenza", data = data_virusedad$"casos_influenza", color = "#fc4e2a")  %>% 
   hc_add_series(name = "VSR", data = data_virusedad$"casos_vsr", color = "#8c6bb1")  %>% 
   hc_add_series(name = "SARS CoV-2", data = data_virusedad$"casos_covid", color = "#41ab5d")  %>% 
-  hc_title(text = "Determinaciones positivas de virus respiratorios por grupo etario en IRAG e IRAGe.\n Desde SE23 2024-SE34 2025.\n Hospital Dr. Humberto J. Notti, Mendoza.")            
+  hc_title(text = "")            
 
 grafico_interactivo_virusedad
 

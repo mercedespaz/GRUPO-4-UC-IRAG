@@ -103,8 +103,7 @@ Grafico_vacuna <- highchart() %>%
     pointFormat = '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b>'
   ) %>%
   hc_title(
-    text = "Vacunación materna VSR en menores de 6 meses notificados en la UC-IRAG
-    (IRAG e IRAGe). Desde SE23 2024-SE34 2025.\nHospital Dr. Humberto J. Notti, Mendoza."
+    text = ""
   )
 
 Grafico_vacuna
