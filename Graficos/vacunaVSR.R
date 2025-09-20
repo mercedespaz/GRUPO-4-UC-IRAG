@@ -58,6 +58,20 @@ valores <- data_vacuna_tabla %>%
     Porcentaje = round(Frecuencia / totales * 100, 1)
   )
 
+#Para contar madres vacunadas y no vacunadas
+data_vacuna %>%
+  count(detectable_vacuna)
+
+# Contar las no vacunadas
+vac_no <- sum(data_vacuna$detectable_vacuna == 0, na.rm = TRUE)
+
+# Contar las vacunadas
+vac_si<- sum(data_vacuna$detectable_vacuna == 1, na.rm = TRUE)
+
+#Porcentajes de madres vacunadas y no vacunadas
+porc_vac_no <- round((vac_si / totales) * 100, 1)
+porc_vac_si <- round((vac_no / totales) * 100, 1)
+
 # Gráfico horizontal de barras con Highchart
 Grafico_vacuna <- highchart() %>%
   hc_chart(type = "bar") %>%
