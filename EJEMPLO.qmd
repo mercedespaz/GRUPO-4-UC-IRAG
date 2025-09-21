@@ -60,7 +60,7 @@ mapa_efectores
 
 ```
 
-Fuente: Departamento de epidemiología, Ministerio de salud y deporte de la provincia de Mendoza.
+Fuente: Elaboración propia. Dirección de Epidemiología, Calidad y Control de Gestión. Ministerio de Salud y Deporte de Mendoza.
 
 ## OBJETIVO GENERAL
 
@@ -110,7 +110,7 @@ En lactantes menores de 6 meses también considerar:
 <img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
 :::
 
-Fuente: Elaboración propia, Hospital "Dr. Humberto J. Notti".
+Fuente: Elaboración propia, UC-IRAG Hospital "Dr. Humberto J. Notti".
 
 ::: criterios-pequenos
 **Criterios de inclusión**
@@ -198,6 +198,8 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Requerimiento de terapia intensiva
 
+En nuestra población pediátrica, la proporción de casos de IRAG e IRAGe que durante la internación requirieron cuidados críticos (UTIP/Neonatología) es relativamente bajo. En relación a la calidad de la notificación de esta dato, menos de un 10% de los casos (8,8% de las IRAG y 7,9% de la IRAGe notificadas) no tienen la información reportada al SNVS 2.0. De los casos con información disponible, la proporción de casos de IRAG que requirió UTI, alcanzó el 8.9%, mientras que entre las IRAGe, el porcentaje fue superior, de 14,8% (grupo etario de 0 a 23 meses). 
+
 **Gráfico 4.** Requerimiento de UTIP en IRAG e IRAGe. Desde SE23/24 - SE34/25. Hospital "Dr. Humberto J. Notti", Mendoza.
 
 ```{r}
@@ -236,4 +238,4 @@ Graficoagrupado
 
 ```
 
-Fuente: datos extraídos de la base de datos agrupados de la UC-IRAG Hospital "Dr. Humberto J. Notti", Mendoza.
+Fuente: base de datos de la notificación agrupada numérica semanal de la UC-IRAG Hospital "Dr. Humberto J. Notti", Mendoza.
