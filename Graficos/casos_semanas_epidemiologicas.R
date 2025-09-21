@@ -23,6 +23,25 @@ casos_totales <- sum(casos_IRAG + casos_IRAGe)
 porc_IRAG <- round((casos_IRAG / casos_totales) * 100, 1)
 porc_IRAGe <- round((casos_IRAGe / casos_totales) * 100, 1)
 
+#Año de comienzo de la estrategia
+
+anio_minimo <- min(data$ANIO_FECHA_MINIMA, na.rm = TRUE)
+
+# SE del año de comienzo de la estrategia
+
+semanas_anio_minimo <- data[data$ANIO_FECHA_MINIMA == anio_minimo, "SEPI_FECHA_MINIMA"]
+
+semana_min_anio_minimo <- min(semanas_anio_minimo, na.rm = TRUE)
+
+#Año del corte de análisis
+
+anio_maximo <- max(data$ANIO_FECHA_MINIMA, na.rm = TRUE)
+
+#SE del corte de análisis
+
+semanas_anio_maximo <- data[data$ANIO_FECHA_MINIMA == anio_maximo, "SEPI_FECHA_MINIMA"]
+
+semana_max_anio_minimo <- max(semanas_anio_maximo, na.rm = TRUE)
 
 #GRAFICO INTERACTIVO POR SE POR IRAG E IRAGE
 casos_se <- highchart()  %>% 
