@@ -89,7 +89,16 @@ grafico_UTIP_2 <- highchart() %>%
       arrange(match(CLASIFICACION_MANUAL, categorias)) %>% 
       pull(casos),
     color = "#1f77b4"
-  ) %>%
+  ) %>% 
+  hc_add_series(
+    name = "Sin dato",
+    data = data_grafico_utip %>% 
+        filter(CUIDADO_INTENSIVO == "Sin dato",
+               CLASIFICACION_MANUAL %in% categorias) %>% 
+        arrange(match(CLASIFICACION_MANUAL, categorias)) %>% 
+        pull(casos),
+      color = "#A9A9A9"
+    ) %>%
   hc_exporting(enabled = TRUE) %>%
   hc_tooltip(
     pointFormat = "{series.name}: <b>{point.y}</b> casos<br/>Proporción: <b>{point.percentage:.1f}%</b>"
