@@ -37,6 +37,7 @@ Las infecciones respiratorias agudas (IRA) representan una importante causa de m
 #| echo: false
 #| warning: false
 
+source("Establecimiento.R")
 source("librerias.R")
 source("importacion_base_nominal.R")
 source("Mapa/mapa_efectores.R")
