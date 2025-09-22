@@ -199,9 +199,9 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Requerimiento de terapia intensiva
 
-En nuestra población pediátrica, la proporción de casos de IRAG e IRAGe que durante la internación requirieron cuidados críticos (UTIP/Neonatología) es relativamente bajo. En relación a la calidad de la notificación de esta dato, menos de un 10% de los casos (8,8% de las IRAG y 7,9% de la IRAGe notificadas) no tienen la información reportada al SNVS 2.0. De los casos con información disponible, la proporción de casos de IRAG que requirió UTI, alcanzó el 8.9%, mientras que entre las IRAGe, el porcentaje fue superior, de 14,8% (grupo etario de 0 a 23 meses).
+En nuestra población pediátrica, la proporción de casos de IRAG e IRAGe que durante la internación requirieron cuidados críticos (UTIP/Neonatología) es relativamente bajo. En relación a la calidad de la notificación de esta dato, menos de un 10% de los casos (8,8% de las IRAG y 7,9% de la IRAGe notificadas) no tienen la información reportada al SNVS 2.0. De los casos con información disponible, la proporción de casos de IRAG que requirió UTI, alcanzó el `r porc_IRAG_UTI`%, mientras que entre las IRAGe, el porcentaje fue superior, de `r porc_IRAGe_UTI`% (grupo etario de 0 a 23 meses).
 
-**Gráfico 4.** Requerimiento de UTIP en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.(falta n)
+**Gráfico 4.** Requerimiento de UTIP en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.(n=`r casos_totales`)
 
 ```{r}
 #| echo: false
