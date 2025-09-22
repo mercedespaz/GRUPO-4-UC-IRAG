@@ -1,6 +1,6 @@
 ---
 lang: es 
-title:  'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): "`r establecimiento`", MENDOZA'
+title:  'UNIDAD CENTINELA DE INFECCIONES RESPIRATORIAS AGUDAS GRAVES (UC-IRAG): `r establecimiento`, MENDOZA'
 date: "`r Sys.Date()`"
 format:
  html: 

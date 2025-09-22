@@ -3,4 +3,4 @@
 # ===============================
 establecimiento <- unique(data$ESTABLECIMIENTO_INTERNACION)
 
-unique(data$ESTABLECIMIENTO_INTERNACION)
+
