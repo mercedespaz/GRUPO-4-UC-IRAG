@@ -65,7 +65,7 @@ Fuente: Elaboración propia. Dirección de Epidemiología, Calidad y Control de 
 
 ## OBJETIVO GENERAL
 
-Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del  `r establecimiento` de la provincia de Mendoza, desde la SE `r semana_min_anio_minimo` de `r anio_minimo` a la SE`r semana_max_anio_minimo` de `r anio_maximo`.
+Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del `r establecimiento` de la provincia de Mendoza, desde la SE `r semana_min_anio_minimo` de `r anio_minimo` a la SE`r semana_max_anio_minimo` de `r anio_maximo`.
 
 ## OBJETIVOS ESPECÍFICOS
 
@@ -228,7 +228,7 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Impacto en la ocupación de camas de internación pediátrica
 
-Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el \[PONER PORCENTAJE\] del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que aporta una aproximación objetiva acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
+Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción global de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el 12.6% del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que, cuando observamos la distribución de estos porcentajes por SE, nos brinda una aproximación acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, en especial en las semanas de mayor circulación viral, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
 
 **Gráfico 6.** Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.
 
