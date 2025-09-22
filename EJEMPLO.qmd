@@ -28,6 +28,7 @@ execute:
 smooth-scroll: true
 code-copy: true
 ---
+
 ## INTRODUCCIÓN
 
 ```{r}
