@@ -57,6 +57,16 @@ dataagrupado<-dataagrupado %>%
 dataagrupado<-dataagrupado %>% pivot_wider(names_from = NOMBREEVENTOAGRP,
                                values_from = casosinternados)
 
+
+#n de casos de IRAG e IRAGe entre los internados 
+casos_IRAGe_agrupados <- sum(dataagrupado$`Casos de IRAG extendida entre los internados`, na.rm = TRUE)
+casos_IRAG_agrupados <- sum(dataagrupado$`Casos de IRAG entre los internados`, na.rm = TRUE)
+IRAG_totales_agrupado <- sum(casos_IRAG_agrupados + casos_IRAGe_agrupados)
+int_todas_causas <- sum(dataagrupado$`Pacientes internados por todas las causas`, na.rm = TRUE)
+
+#proporción de casos de IRAG e IRAGe del total de internaciones del hospital
+porc_IRAG_totales_agrupado <- round((IRAG_totales_agrupado / int_todas_causas) * 100, 1)
+
 #se corre este comando para calcular la suma de IRAG e IRAGe
 dataagrupado<- dataagrupado %>%
   mutate(IRAG_totales =(`Casos de IRAG entre los internados`+`Casos de IRAG extendida entre los internados`),
