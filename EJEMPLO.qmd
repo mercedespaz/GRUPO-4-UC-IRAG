@@ -111,7 +111,7 @@ En lactantes menores de 6 meses también considerar:
 <img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
 :::
 
-Fuente: Elaboración propia. UC-IRAG  `r establecimiento`.
+Fuente: Elaboración propia. UC-IRAG `r establecimiento`.
 
 ::: criterios-pequenos
 **Criterios de inclusión**
@@ -213,7 +213,7 @@ Fuente: Elaboración propia a partir de datos extraídos del Sistema Nacional de
 
 ### Cobertura de vacunación materna contra VSR en menores de 6 meses
 
-En el período de estudio, se notificaron un  total de `r totales` casos de IRAG e IRAGe en menores de 6 meses. El `r porc_vac_no`% (N=`r vac_no`)  no presentaba antecedentes de vacunación materna contra el Virus Sincicial Respiratorio- VSR , mientras que el `r porc_vac_si` % (N=`r vac_si`) sí contaban con antecedentes de vacunación materna. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VSR en este grupo etario.
+En el período de estudio, se notificaron un total de `r totales` casos de IRAG e IRAGe en menores de 6 meses. El `r porc_vac_no`% (N=`r vac_no`) no presentaba antecedentes de vacunación materna contra el Virus Sincicial Respiratorio- VSR , mientras que el `r porc_vac_si` % (N=`r vac_si`) sí contaban con antecedentes de vacunación materna. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VSR en este grupo etario.
 
 **Gráfico 5.** Antecedentes de vacunación materna contra VSR en casos de IRAG e IRAGe menores de 6 meses. SE `r semana_min_anio_minimo`/`r anio_minimo` - SE `r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento` Mendoza. (N=`r totales`)
 
