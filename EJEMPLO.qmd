@@ -139,9 +139,9 @@ Fuente: Elaboración propia, UC-IRAG Hospital `r establecimiento`.
 
 ### Curva epidémica: casos de IRAG e IRAGe por SE
 
-Desde que se inicio la Estrategia de Unidades Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG), en el `r establecimiento` en la SE `r semana_min_anio_minimo` de `r anio_minimo` hasta la SE `r semana_max_anio_minimo` de `r anio_maximo`, se han notificado un total de 1619 casos. El siguiente gráfico muestra los casos totales de IRAG (1241) e IRAGe (378) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificaron en la SE 33 (mes de agosto). Además, el año en curso presenta un menor número de casos registrados en comparación con el mismo periodo del año anterior.
+Desde que se inicio la Estrategia de Unidades Centinela de Infecciones Respiratorias Agudas Graves (UC-IRAG), en el `r establecimiento` en la SE `r semana_min_anio_minimo` de `r anio_minimo` hasta la SE `r semana_max_anio_minimo` de `r anio_maximo`, se han notificado un total de `r casos_totales` casos. El siguiente gráfico muestra los casos totales de IRAG (`r casos_IRAG`) e IRAGe (`r casos_IRAGe`) registrados en dicho periodo. Se observa que, en ambos años, la mayor cantidad de casos se notificaron en la SE 33 (mes de agosto). Además, el año en curso presenta un menor número de casos registrados en comparación con el mismo periodo del año anterior.
 
-**Gráfico 1.** Casos de IRAG e IRAGe por Semana Epidemiológica. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento`, Mendoza.
+**Gráfico 1.** Casos de IRAG e IRAGe por Semana Epidemiológica. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento`, Mendoza. (n=`r casos_totales`)
 
 ```{r}
 #| echo: false
@@ -154,9 +154,9 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Determinaciones virales positivas: virus respiratorios priorizados (Inlfuenza, SARS CoV-2 y VSR)
 
-Del total de casos notificados en la estrategia, el 46,82% (758) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando 602 determinaciones positivas entre los casos de IRAG e IRAGe. Entre la SE 23 y 41 del 2024, se observa que la circulación predominante correspondió al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar y con menor magnitud. Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2. Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
+Del total de casos notificados en la estrategia, el `r porc_detectables`% (`r total_detectables`) presentó al menos una determinación con resultado positivo. El Virus Sincicial Respiratorio (VSR) fue el agente con la mayor cantidad de resultados positivos, registrando `r casos_VSR` (`r porc_VSR`%) determinaciones positivas entre los casos de IRAG e IRAGe. Entre la SE 23 y 41 del 2024, se observa que la circulación predominante correspondió al VSR, con un pico entre las SE 28 y 31 de ese año. La circulación de Influenza se registró en segundo lugar con `r casos_influenza` casos (`r porc_influenza`%) y con menor magnitud . Hacia las últimas semanas del año, la actividad de Influenza y VSR disminuyó de manera progresiva, destacándose la aparición de SARS-CoV-2 con `r casos_covid` casos (`r porc_covid`%). Durante las primeras semanas del 2025 (hasta la SE 15), se observó una baja circulación de los tres virus respiratorios. No obstante, a partir de la SE 16, se registró un nuevo aumento de casos, alcanzando un segundo pico en la SE 33, nuevamente con predominio de VSR. Este comportamiento refleja el patrón estacional esperado para los virus respiratorios.
 
-**Gráfico 2.** Determinaciones virales positivas por SE entre los casos de IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.
+**Gráfico 2.** Determinaciones virales positivas por SE entre los casos de IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza. (n=`r total_detectables`)
 
 ```{r}
 #| echo: false
@@ -171,7 +171,7 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 La mayor concentración de casos positivos por grupo etario se observó en el grupo de 6 a 23 meses, seguido por los menores de 6 meses. El VSR predomina de manera significativa entre los casos positivos de menores de 4 años. Por otro lado, en los grupos de 5 a 14 años, hay un mayor predominio de Influenza. En todos los grupos etarios, la incidencia de SARS-CoV-2 es significativamente menor, en comparación con los otros virus respiratorios analizados dentro de la estrategia.
 
-**Gráfico 3.** Determinaciones positivas de virus respiratorios por grupo etario en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento`, Mendoza.
+**Gráfico 3.** Determinaciones positivas de virus respiratorios por grupo etario en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento`, Mendoza.(n=`r total_detectables`)
 
 ```{r}
 #| echo: false
@@ -201,7 +201,7 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 En nuestra población pediátrica, la proporción de casos de IRAG e IRAGe que durante la internación requirieron cuidados críticos (UTIP/Neonatología) es relativamente bajo. En relación a la calidad de la notificación de esta dato, menos de un 10% de los casos (8,8% de las IRAG y 7,9% de la IRAGe notificadas) no tienen la información reportada al SNVS 2.0. De los casos con información disponible, la proporción de casos de IRAG que requirió UTI, alcanzó el 8.9%, mientras que entre las IRAGe, el porcentaje fue superior, de 14,8% (grupo etario de 0 a 23 meses).
 
-**Gráfico 4.** Requerimiento de UTIP en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.
+**Gráfico 4.** Requerimiento de UTIP en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.(falta n)
 
 ```{r}
 #| echo: false
@@ -213,9 +213,9 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Cobertura de vacunación materna contra VSR en menores de 6 meses
 
-En el período de estudio, del total de casos de IRAG e IRAGe notificados en menores de 6 meses (359 casos), el 69,1 % de las madres no reportaban antecedentes de vacunación contra el Virus Sincicial Respiratorio- VSR (235 madres no vacunadas y 13 sin el dato registrado), mientras que el 30,9 % (111 madres) sí contaban con la vacunación. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VSR en este grupo etario.
+En el período de estudio, del total de casos de IRAG e IRAGe notificados en menores de 6 meses (`r totales` casos), el `r porc_vac_no`% de las madres no reportaban antecedentes de vacunación contra el Virus Sincicial Respiratorio- VSR (`r vac_no` madres no vacunadas), mientras que el `r porc_vac_si` % (`r vac_si` madres) sí contaban con la vacunación. Estos hallazgos nos permiten inferir una buena calidad en cuanto al reporte del dato de vacunación en el sistema nacional de vigilancia en salud (SNVS 2.0) en el marco de esta estrategia, lo que permite estimar la cobertura de vacunación materna y contribuir, en otro tipo de análisis, con la hipótesis del impacto que esta vacuna tendría en la prevención de las infecciones por VSR en este grupo etario.
 
-**Gráfico 5.** Vacunación materna VSR en menores de 6 meses notificados en la UC-IRAG (IRAG e IRAGe). Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento`, Mendoza.
+**Gráfico 5.** Vacunación materna VSR en menores de 6 meses notificados en la UC-IRAG (IRAG e IRAGe). Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`.`r establecimiento`, Mendoza.(n=`r totales`)
 
 ```{r}
 #| echo: false
@@ -228,9 +228,13 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Impacto en la ocupación de camas de internación pediátrica
 
+<<<<<<< HEAD
 Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción global de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el 12.6% del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que, cuando observamos la distribución de estos porcentajes por SE, nos brinda una aproximación acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, en especial en las semanas de mayor circulación viral, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
+=======
+Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el `r porc_IRAG_totales_agrupado`% del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que aporta una aproximación objetiva acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
+>>>>>>> f970f3ea235f22fa44fb0b3d01bff26d9d792c44
 
-**Gráfico 6.** Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.
+**Gráfico 6.** Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.(n= `r IRAG_totales_agrupado`)
 
 ```{r}
 #| echo: false
