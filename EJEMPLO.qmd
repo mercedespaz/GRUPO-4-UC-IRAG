@@ -228,11 +228,7 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 ### Impacto en la ocupación de camas de internación pediátrica
 
-<<<<<<< HEAD
-Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción global de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el 12.6% del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que, cuando observamos la distribución de estos porcentajes por SE, nos brinda una aproximación acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, en especial en las semanas de mayor circulación viral, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
-=======
 Del análisis de la notificación agrupada numérica durante el período considerado, se desprende que la proporción de internaciones relacionadas con la estrategia centinela (casos de IRAG e IRAGe) representan el `r porc_IRAG_totales_agrupado`% del total de internaciones del hospital. Este dato demuestra no sólo la relevancia de esta estrategia en dicho establecimiento, sino que aporta una aproximación objetiva acerca del impacto que las infecciones respiratorias agudas graves tienen sobre la ocupación de camas hospitalarias, teniendo en cuenta que los casos de IRAG e IRAGe corresponden a una fracción de los casos que requieren internación por causa respiratoria, ya que no todas las IRA con requerimiento de internación se notifican en esta estrategia, acorde con las definiciones vigentes.
->>>>>>> f970f3ea235f22fa44fb0b3d01bff26d9d792c44
 
 **Gráfico 6.** Porcentaje de IRAG e IRAGe sobre el total de internaciones hospitalarias. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.(n= `r IRAG_totales_agrupado`)
 
