@@ -25,11 +25,11 @@ porc_IRAGe <- round((casos_IRAGe / casos_totales) * 100, 1)
 
 #Año de comienzo de la estrategia
 
-anio_minimo <- min(data$ANIO_FECHA_MINIMA, na.rm = TRUE)
+anio_minimo <- min(data$ANIO_FECHA_INTER, na.rm = TRUE)
 
 # SE del año de comienzo de la estrategia
 
-semanas_anio_minimo <- data[data$ANIO_FECHA_MINIMA == anio_minimo, "SEPI_FECHA_MINIMA"]
+semanas_anio_minimo <- data[data$ANIO_FECHA_INTER == anio_minimo, "SEPI_FECHA_INTER"]
 
 semana_min_anio_minimo <- min(semanas_anio_minimo, na.rm = TRUE)
 
