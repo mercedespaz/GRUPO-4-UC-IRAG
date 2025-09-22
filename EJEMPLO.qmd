@@ -187,7 +187,7 @@ Fuente: datos extraídos del Sistema Nacional de Vigilancia, SNVS 2.0.
 
 El 32,8% de las comorbilidades notificadas en la estrategia correspondieron a bronquiolitis previa y el 12,8% a prematuros. El predominio en el reporte de estas comorbilidades podría corresponderse con la mayor cantidad de determinaciones positivas para VSR identificadas, respaldando la evidencia de una predisposición de estos pacientes a desarrollar dicha patología.
 
-**Tabla 1.** Distribución de las comorbilidades en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.(falta n)
+**Tabla 1.** Distribución de las comorbilidades en IRAG e IRAGe. Desde SE`r semana_min_anio_minimo`/`r anio_minimo` - SE`r semana_max_anio_minimo`/`r anio_maximo`. `r establecimiento`, Mendoza.
 
 ```{r}
 #| echo: false
