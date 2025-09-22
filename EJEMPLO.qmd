@@ -65,7 +65,7 @@ Fuente: Elaboración propia. Dirección de Epidemiología, Calidad y Control de 
 
 ## OBJETIVO GENERAL
 
-Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del  `r establecimiento` de la provincia de Mendoza, desde la SE `r semana_min_anio_minimo` de `r anio_minimo` a la SE`r semana_max_anio_minimo` de `r anio_maximo`.
+Caracterizar a través de variables epidemiológicas, clínicas y del diagnóstico etiológico los casos de IRAG e IRAG extendida (IRAGe) en pacientes pediátricos del `r establecimiento` de la provincia de Mendoza, desde la SE `r semana_min_anio_minimo` de `r anio_minimo` a la SE`r semana_max_anio_minimo` de `r anio_maximo`.
 
 ## OBJETIVOS ESPECÍFICOS
 
