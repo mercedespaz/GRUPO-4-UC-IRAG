@@ -158,7 +158,7 @@ Genera un gráfico interactivo con **Highcharter** que combina:
  
  Calcula frecuencia y porcentaje de cada comorbilidad.
  
- Genera una tabla interactiva con gt, con colores escalados, notas de fuente (SNVS 2.0) y formato optimizado para presentación.
+ Genera una tabla con gt, con colores escalados, notas de fuente (SNVS 2.0) y formato optimizado para presentación.
  
  Permite visualizar rápidamente las comorbilidades más frecuentes en pacientes con IRAG/IRAGe entre SE23 2024 y SE34 2025 en el Hospital Dr. Humberto J. Notti.
 
