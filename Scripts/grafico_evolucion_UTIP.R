@@ -1,7 +1,5 @@
 #Grafico requerimiento de internacion IRAG e IRAGE
 
-source("importacion_base_nominal.R")
-
 #Categorias de las variables de interés
 #Clasificación manual: IRAG, IRAG extendida, Caso invalidado por epidemiologia
 
@@ -48,44 +46,6 @@ porc_IRAGe_UTI <- round((valor_IRAG_extendida / casos_IRAGe) * 100, 1)
 #Categorias tipo IRAG
 categorias <- c("Infección respiratoria aguda grave (IRAG)", 
                 "IRAG extendida")
-
-# Grafico
-grafico_utip <- highchart() %>%
-  hc_chart(type = "column") %>%
-  hc_xAxis(categories = categorias) %>%
-  hc_yAxis(title = list(text = "Número de casos")) %>%
-  hc_plotOptions(column = list(
-    dataLabels = list(
-      enabled = TRUE,
-      formatter = JS(
-        "function() { 
-           return this.y + ' casos<br>' + Highcharts.numberFormat(this.percentage, 1) + '%';
-         }")
-    ),
-    stacking = "percent"
-  )) %>%
-  hc_add_series(
-    name = "Requirió UTIP",
-    data = data_grafico_utip %>% 
-      filter(CUIDADO_INTENSIVO == "SI", CLASIFICACION_MANUAL %in% categorias) %>%
-      arrange(match(CLASIFICACION_MANUAL, categorias)) %>%
-      pull(casos),
-    color = "#feb24c"
-  ) %>%
-  hc_add_series(
-    name = "No requirió UTIP",
-    data = data_grafico_utip %>% 
-      filter(CUIDADO_INTENSIVO == "NO", CLASIFICACION_MANUAL %in% categorias) %>%
-      arrange(match(CLASIFICACION_MANUAL, categorias)) %>%
-      pull(casos),
-    color = "#3182bd"
-  ) %>%
-  hc_tooltip(pointFormat = "{series.name}: <b>{point.y}</b> casos<br/>Proporción: <b>{point.percentage:.1f}%</b>") %>%
-  hc_exporting(enabled = TRUE) %>%
-  hc_title(text = "Requerimiento de UTIP en IRAG e IRAGe. Hospital Dr. Humberto J. Notti, Mendoza")
-
-grafico_utip 
-
 
 #Grafico sin etiquetas estaticas
 
