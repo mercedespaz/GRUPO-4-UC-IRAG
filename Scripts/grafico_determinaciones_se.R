@@ -1,8 +1,5 @@
 #GRAFICO DETERMINACIONES POSITIVAS POR SEMANA EPIDEMIOLOGICA
 
-#Importo base
-source("importacion_base_nominal.R")
-
 #Selecciono columnas de interes para el analisis
 data_virus <- data %>% select(SEPI_MIN_INTERNACION,ANIO_MIN_INTERNACION, INFLUENZA_FINAL,VSR_FINAL,COVID_19_FINAL)
 
