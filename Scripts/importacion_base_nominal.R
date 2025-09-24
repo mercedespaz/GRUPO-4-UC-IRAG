@@ -1,5 +1,3 @@
 #Codigo para subir base
-library(tidyverse)
 
-
-data <- read.csv2("notti.csv", sep = ";", encoding = "latin1")
+data <- read.csv2("Data y plantillas/notti.csv", sep = ";", encoding = "latin1")
