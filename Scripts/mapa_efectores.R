@@ -3,7 +3,7 @@ library(leaflet)
 library(geoAr)
 library(readr)
 
-EFECTORES_MENDOZA <- read_csv("Mapa/EFECTORES MENDOZA.csv")
+EFECTORES_MENDOZA <- read_csv("Data y plantillas/EFECTORES MENDOZA.csv")
 EFECTORES_MENDOZA <- EFECTORES_MENDOZA %>% mutate(NIVEL_COMPL = case_when(`NIVEL COMPL` == "NIVEL III" ~ "ALTA COMPLEJIDAD CON TERAPIA INTENSIVA",
                                                                           TRUE ~ "SIN CLASIFICAR"))
 # Separar coordenadas en latitud y longitud
