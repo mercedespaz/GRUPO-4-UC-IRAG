@@ -16,7 +16,7 @@ format:
    toc-title: "ÍNDICE"
    toc-depth: 3
    toc-location: left
-   css: estilo.css
+   css: Data y plantillas/estilo.css
    theme: cerulean
 include-in-header: "Logo_Ministerio_Mendoza.html"
 editor: visual
@@ -108,7 +108,7 @@ En lactantes menores de 6 meses también considerar:
 **Figura 1.** Flujograma de identificación de pacientes en la UC-IRAG, `r establecimiento`.
 
 ::: {style="text-align: center;"}
-<img src="Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
+<img src="Data y plantillas/Algoritmo.png" alt="Diagrama de flujo del algoritmo" style="width: 70%; max-width: 600px; height: auto; display: block; margin: 0 auto;"/>
 :::
 
 Fuente: Elaboración propia. UC-IRAG `r establecimiento`.
