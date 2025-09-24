@@ -1,6 +1,4 @@
 #porcentaje de madres vacunadas en pacientes menores de 6 meses 
-library(highcharter)
-library(dplyr)
 
 #Crear variable GRUPOETARIO
 #La base original no tiene la categoria menor a 6 meses, construirla para luego poder filtrar
