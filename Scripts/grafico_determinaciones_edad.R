@@ -1,8 +1,4 @@
 #GRAFICO DE RESCATE VIRAL POR GRUPO ETARIO
-
-#Importo base
-source("importacion_base_nominal.R")
-                                                                                                  
 #Selecciono variables de interes para el analisis
 
 data_virusedad <- data %>% select(EDAD_UC_IRAG,INFLUENZA_FINAL,VSR_FINAL,COVID_19_FINAL)
