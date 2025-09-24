@@ -1,8 +1,4 @@
 #DATOS DE IRAG E IRAGE POR SEMANA EPIDEMIOLOGICA
-
-source("importacion_base_nominal.R")
-
-
 #CASOS DE IRAG E IRAGE POR SE
 
 data_filtrada <- data %>% select(CLASIFICACION_MANUAL,SEPI_MIN_INTERNACION,ANIO_MIN_INTERNACION) %>%
