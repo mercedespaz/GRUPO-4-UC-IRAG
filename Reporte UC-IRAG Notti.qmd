@@ -33,17 +33,17 @@ code-copy: true
 #| echo: false
 #| warning: false
 
-source("librerias.R")
-source("importacion_base_nominal.R")
-source("Establecimiento.R")
-source("Mapa/mapa_efectores.R")
-source("Graficos/casos_semanas_epidemiologicas.R")
-source("Graficos/grafico_evolucion_UTIP.R")
-source("Graficos/grafico_determinaciones_edad.R")
-source("Graficos/grafico_determinaciones_se.R")
-source("Graficos/comorbilidades.R")
-source("Graficos/vacunaVSR.R")
-source("Graficos/agrupado.R")
+source("Scripts/librerias.R")
+source("Scripts/importacion_base_nominal.R")
+source("Scripts/Establecimiento.R")
+source("Scripts/mapa_efectores.R")
+source("Scripts/casos_semanas_epidemiologicas.R")
+source("Scripts/grafico_evolucion_UTIP.R")
+source("Scripts/grafico_determinaciones_edad.R")
+source("Scripts/grafico_determinaciones_se.R")
+source("Scripts/comorbilidades.R")
+source("Scripts/vacunaVSR.R")
+source("Scripts/agrupado.R")
 
 ```
 
