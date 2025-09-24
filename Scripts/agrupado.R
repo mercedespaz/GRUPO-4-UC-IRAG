@@ -1,8 +1,3 @@
-#librerias 
-library(readr)
-library(tidyverse)
-library(highcharter)
-
 
 #Carga de la base de datos agrupados
 UC_IRAG_Carga_Agrupada <- read_csv("Data y plantillas/UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
