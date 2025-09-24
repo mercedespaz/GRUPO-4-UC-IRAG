@@ -1,8 +1,4 @@
-library(gt)
-library(dplyr)
-library(stringr)
 
-#Agregar como seleccionaron esas variables
 # Las variables incluidas se definieron previamente mediante un análisis en R con la función table(),
 # seleccionando aquellas 10 que presentaron las frecuencias más altas.
 
