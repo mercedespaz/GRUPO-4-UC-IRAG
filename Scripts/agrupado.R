@@ -5,10 +5,10 @@ library(highcharter)
 
 
 #Carga de la base de datos agrupados
-UC_IRAG_Carga_Agrupada <- read_csv("UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
+UC_IRAG_Carga_Agrupada <- read_csv("Data y plantillas/UC IRAG - Carga Agrupada-Mendoza-Notti - HOSPITAL HUMBERTO J. NOTTI.-.csv")
 
 
-#Elimino primeraa fila que no contiene datos
+#Elimino primera fila que no contiene datos
 UC_IRAG_Carga_Agrupada <-UC_IRAG_Carga_Agrupada[-1,]
 
  
